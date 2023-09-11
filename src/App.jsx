@@ -6,7 +6,6 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Homepage from "./page/Homepage";
 import CaseStudiesPage from "./page/CaseStudiesPage";
-import Link from "@mui/material/Link";
 import "./App.css";
 
 const theme = createTheme();
@@ -139,11 +138,18 @@ function App() {
               >
                 info@tomei.network
               </Button>
-              <Link to="/" sx={{ textDecoration: "none" }}>
-                <Button color="inherit" sx={{ paddingTop: "27px" }}>
+                <Button
+                  color="inherit"
+                  sx={{
+                    paddingTop: "27px",
+                    height: "5px",
+                    float: "left !important",
+                    color:"white",
+                    textDecoration: "underline"
+                  }}
+                >
                   Close
                 </Button>
-              </Link>
             </Box>
           </Box>
         </Modal>
