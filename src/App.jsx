@@ -10,7 +10,7 @@ import "./App.css";
 const theme = createTheme();
 
 function App() {
-  const [page, setPage] = useState("caseStudiesPage");
+  const [page, setPage] = useState("homepage");
   const [open, setOpen] = React.useState(false);
 
   const handleOpen = () => {

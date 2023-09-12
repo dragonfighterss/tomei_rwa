@@ -122,6 +122,7 @@ const ConsultationModal = (props) => {
               color: "white",
               textDecoration: "underline",
             }}
+            onClick={props.handleClose}
           >
             Close
           </Button>
