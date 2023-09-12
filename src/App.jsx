@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Header from "./component/Header";
-import Footer from "./component/Footer";
-import ConsultationModal from "./component/Consultation/ConsultationModal";
-import Homepage from "./page/Hompage";
-import CaseStudiesPage from "./page/CaseStudiesPage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ConsultationModal from "./components/Consultation/ConsultationModal";
+import Homepage from "./pages/HomPage";
+import CaseStudiesPage from "./pages/CaseStudiesPage";
 import "./App.css";
 
 const theme = createTheme();
