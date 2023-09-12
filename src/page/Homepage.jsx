@@ -1,12 +1,14 @@
 import React from "react";
 import FirstComponet from "../component/Hompage/FirstComponet";
 import SecondComponent from "../component/Hompage/SecondComponent";
+import ThirdComponent from "../component/Hompage/ThirdComponent";
 
 const Homepage = () => {
   return (
     <div>
-       <FirstComponet />
+      <FirstComponet />
       <SecondComponent />
+      <ThirdComponent />
     </div>
   );
 };

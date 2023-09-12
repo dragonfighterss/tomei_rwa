@@ -39,9 +39,7 @@ const useStyles = makeStyles({
     paddingTop: 132,
     paddingLeft: 106,
     display: "inline-flex",
-    flexDirection: "column",
     alignItems: "flex-start",
-    gap: 50,
   },
   line: {
     background: "#FFF",
@@ -74,7 +72,6 @@ const useStyles = makeStyles({
     width: 285,
     height: 279,
     marginRight: 115,
-    float: "left",
   },
 });
 const SecondComponent = () => {
@@ -104,7 +101,7 @@ const SecondComponent = () => {
           <div className={classes.contentGroup}>
             <Typography className={classes.content1}>Cutting-Edge</Typography>
             <Typography className={classes.content2}>
-              ZK-Cryptography
+              ZK-Cryptography,
             </Typography>
             <Typography className={classes.content1}>
               Ultimate Privacy
@@ -116,12 +113,12 @@ const SecondComponent = () => {
           <Icon2 className={classes.icon} />
           <Divider className={classes.line} />
           <div className={classes.contentGroup}>
-            <Typography className={classes.content1}>Cutting-Edge</Typography>
+            <Typography className={classes.content1}>Advanced</Typography>
             <Typography className={classes.content2}>
-              ZK-Cryptography
+              Programmability,
             </Typography>
             <Typography className={classes.content1}>
-              Ultimate Privacy
+              Seamless Compliance
             </Typography>
           </div>
           <div />
@@ -130,12 +127,10 @@ const SecondComponent = () => {
           <Icon3 className={classes.icon} />
           <Divider className={classes.line} />
           <div className={classes.contentGroup}>
-            <Typography className={classes.content1}>Cutting-Edge</Typography>
-            <Typography className={classes.content2}>
-              ZK-Cryptography
-            </Typography>
+            <Typography className={classes.content1}>Unparalleled</Typography>
+            <Typography className={classes.content2}>Attestation,</Typography>
             <Typography className={classes.content1}>
-              Ultimate Privacy
+              Unmatched Confidence
             </Typography>
           </div>
           <div />
