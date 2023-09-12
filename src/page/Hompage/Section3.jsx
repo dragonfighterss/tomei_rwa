@@ -85,7 +85,7 @@ const useStyles = makeStyles({
     paddingTop: 60,
   }
 });
-const ThirdComponent = () => {
+const Section3 = () => {
   const classes = useStyles();
 
   return (
@@ -145,4 +145,4 @@ const ThirdComponent = () => {
   );
 };
 
-export default ThirdComponent;
+export default Section3;

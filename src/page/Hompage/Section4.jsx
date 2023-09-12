@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     flexShrink: 0,
   },
 });
-const FourthComponent = () => {
+const Section4 = () => {
   const classes = useStyles();
 
   return (
@@ -96,4 +96,4 @@ const FourthComponent = () => {
   );
 };
 
-export default FourthComponent;
+export default Section4;

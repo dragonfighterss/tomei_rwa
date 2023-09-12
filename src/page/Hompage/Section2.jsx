@@ -74,7 +74,7 @@ const useStyles = makeStyles({
     marginRight: 115,
   },
 });
-const SecondComponent = () => {
+const Section2 = () => {
   const classes = useStyles();
 
   return (
@@ -140,4 +140,4 @@ const SecondComponent = () => {
   );
 };
 
-export default SecondComponent;
+export default Section2;

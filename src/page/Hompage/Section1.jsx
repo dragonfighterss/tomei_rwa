@@ -13,11 +13,11 @@ const useStyles = makeStyles({
     leadingTrim: "both",
     textEdge: "cap",
     fontFamily: "Rand",
-    fontSize: 120,
+    fontSize: 150,
     fontStyle: "normal",
     fontWeight: 250,
-    lineHeight: 1.3,
-    letterSpacing: -3,
+    lineHeight: "160px",
+    letterSpacing: 3,
     textTransform: "capitalize",
     height: 300,
   },
@@ -31,9 +31,10 @@ const useStyles = makeStyles({
   },
   sloginBg: {
     height: 630,
-    width: 1000,
-    paddingTop: 132,
+    width: 1008,
+    marginTop: -639,
     paddingLeft: 148,
+    position: "absolute",
   },
   letter: {
     color: "#FFF",
@@ -59,8 +60,13 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
     position: "absolute",
   },
+  imgBg: {
+    height: 760,
+    background: "#010552",
+    mixBlendMode: "exclusion",
+  },
 });
-const FirstComponet = () => {
+const Section1 = () => {
   const classes = useStyles();
 
   return (
@@ -76,6 +82,7 @@ const FirstComponet = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <div className={classes.imgBg}></div>
         <div className={classes.sloginBg}>
           <span className={classes.slogon}>
             The World`s Most Valuable RWA Tokens
@@ -183,4 +190,4 @@ const FirstComponet = () => {
   );
 };
 
-export default FirstComponet;
+export default Section1;

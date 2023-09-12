@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { ReactComponent as LogoName } from "../assets/logos/Logo_name.svg";
-import { ReactComponent as LogoSymbol } from "../assets/logos/Logo_symbol.svg";
+import { ReactComponent as LogoName } from "../assets/images/Group_10830.svg";
+import { ReactComponent as LogoSymbol } from "../assets/images/T-Symbol1.svg";
 import { Button } from "@mui/material";
 
 const useStyles = makeStyles({
@@ -37,6 +37,9 @@ const useStyles = makeStyles({
     marginTop: 37,
     marginRight: 160,
   },
+  LogoSymbol: {
+    paddingRight: 20,
+  },
 });
 
 const Header = (props) => {
@@ -44,20 +47,20 @@ const Header = (props) => {
   return (
     <div className={classes.header}>
       <div className={classes.logo}>
-        <LogoSymbol />
+        <LogoSymbol className={classes.LogoSymbol} />
         <LogoName />
       </div>
       <div className={classes.btnGroup}>
         <Button
           className={classes.button}
-          onClick={()=>props.handleChangePage("homepage")}
+          onClick={() => props.handleChangePage("homepage")}
           sx={{ color: "white" }}
         >
           Technology
         </Button>
         <Button
           className={classes.button}
-          onClick={()=>props.handleChangePage("caseStudiesPage")}
+          onClick={() => props.handleChangePage("caseStudiesPage")}
           sx={{ color: "white", paddingLeft: "30px" }}
         >
           Case Studies
