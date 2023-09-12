@@ -17,11 +17,11 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
   },
   left: {
-    width: 720,
+    width: "50%",
     backgroundColor: "#0A0A0A",
   },
   right: {
-    width: 720,
+    width: "50%",
     backgroundColor: "#141414",
   },
   left_top: {

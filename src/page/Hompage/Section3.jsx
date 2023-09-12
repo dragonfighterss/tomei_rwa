@@ -11,12 +11,12 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
   },
   left: {
-    width: 720,
+    width: "50%",
     height: 800,
     backgroundColor: "#0A0A0A",
   },
   right: {
-    width: 720,
+    width: "50%",
     height: 800,
     backgroundColor: "#141414",
   },
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
   listGroup: {
     paddingLeft: 69,
     paddingTop: 60,
-  }
+  },
 });
 const Section3 = () => {
   const classes = useStyles();
@@ -116,30 +116,30 @@ const Section3 = () => {
           <li className={classes.list}>Accessibility and Liquidity</li>
           <li className={classes.list}>Stable Value</li>
         </div>
-          <Button
-            sx={{
-              display: "block",
-              color: "white",
-              textAlign: "center",
-              fontFamily: "Rand",
-              fontSize: 16.5,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "150%",
-              letterSpacing: 0.33,
-              textTransform: "capitalize",
-              borderRadius: 30,
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              paddingTop: "10px",
-              paddingBottom: "10px",
-              marginTop: "73px",
-              marginLeft: "60px",
-              border: "0.75px solid #FFF",
-            }}
-          >
-            Request A Consultation
-          </Button>
+        <Button
+          sx={{
+            display: "block",
+            color: "white",
+            textAlign: "center",
+            fontFamily: "Rand",
+            fontSize: 16.5,
+            fontStyle: "normal",
+            fontWeight: 500,
+            lineHeight: "150%",
+            letterSpacing: 0.33,
+            textTransform: "capitalize",
+            borderRadius: 30,
+            paddingLeft: "15px",
+            paddingRight: "15px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+            marginTop: "73px",
+            marginLeft: "60px",
+            border: "0.75px solid #FFF",
+          }}
+        >
+          Request A Consultation
+        </Button>
       </div>
     </div>
   );
