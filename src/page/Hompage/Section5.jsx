@@ -9,10 +9,9 @@ const useStyles = makeStyles({
     width: "100%",
     height: 480,
     backgroundColor: "#141414",
-  },
-  top: {
-    paddingTop: 120,
-    paddingLeft: 160,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     color: "#fff",
@@ -25,8 +24,7 @@ const useStyles = makeStyles({
     textTransform: "capitalize",
   },
   bottom: {
-    paddingTop: 81,
-    paddingLeft: 160,
+    paddingTop: 80,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -62,28 +60,30 @@ const Section5 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.top}>
-        <div style={{ width: "585px" }}>
-          <span className={classes.title}>Strategic investors</span>
+      <div>
+        <div>
+          <div style={{ width: "585px" }}>
+            <span className={classes.title}>Strategic investors</span>
+          </div>
         </div>
-      </div>
-      <div className={classes.bottom}>
-        <div className={classes.block}>
-          <Icon1 className={classes.icon} />
-          <Divider className={classes.line} />
-          <Typography className={classes.content}>
-            Susquehanna Private Equity Investments, LLLP
-          </Typography>
-          <div />
-        </div>
-        <div className={classes.block}>
-          <Icon2 className={classes.icon} />
-          <Divider className={classes.line} />
-          <Typography className={classes.content}>
-            Republic Capital, the worlds largest private marketplace with 2.5M
-            users
-          </Typography>
-          <div />
+        <div className={classes.bottom}>
+          <div className={classes.block}>
+            <Icon1 className={classes.icon} />
+            <Divider className={classes.line} />
+            <Typography className={classes.content}>
+              Susquehanna Private Equity Investments, LLLP
+            </Typography>
+            <div />
+          </div>
+          <div className={classes.block}>
+            <Icon2 className={classes.icon} />
+            <Divider className={classes.line} />
+            <Typography className={classes.content}>
+              Republic Capital, the worlds largest private marketplace with 2.5M
+              users
+            </Typography>
+            <div />
+          </div>
         </div>
       </div>
     </div>

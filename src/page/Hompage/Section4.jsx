@@ -8,6 +8,9 @@ const useStyles = makeStyles({
     width: "100%",
     height: 800,
     backgroundColor: "#000",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   box: {
     height: 500,
@@ -16,11 +19,6 @@ const useStyles = makeStyles({
     backgroundColor: "#FFE1D7",
     display: "inline-flex",
     alignItems: "flex-start",
-  },
-  boxBg: {
-    paddingLeft: 60,
-    paddingRight: 60,
-    paddingTop: 146,
   },
   description: {
     color: "#000",
@@ -60,7 +58,7 @@ const Section4 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.boxBg}>
+      <div>
         <div className={classes.box}>
           <div className={classes.boxLeft}>
             <div className={classes.description}>

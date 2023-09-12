@@ -10,10 +10,14 @@ const useStyles = makeStyles({
     width: "100%",
     height: 900,
     backgroundColor: "#000",
+    display: "flex",
+    // justifyContent: "center",
   },
   top: {
     paddingTop: 90,
-    paddingLeft: 160,
+  },
+  totalBlock: {
+    paddingLeft: "10%",
   },
   title: {
     color: "#fff",
@@ -37,7 +41,6 @@ const useStyles = makeStyles({
     height: 760,
     width: 1000,
     paddingTop: 132,
-    paddingLeft: 106,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -79,61 +82,63 @@ const Section2 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.top}>
-        <div style={{ width: "488px" }}>
-          <span className={classes.title}>
-            In-Demand Assets that Maximize Revenue and Reduce Costs
-          </span>
-        </div>
-        <div style={{ width: "554px", paddingTop: "40px" }}>
-          <span className={classes.content}>
-            Proprietary technology powers a platform that delivers unparalleled
-            transparency and compliance, while maintaining complete control over
-            access and privacy along with optimized transactions that drive down
-            costs.
-          </span>
-        </div>
-      </div>
-      <div className={classes.bottom}>
-        <div className={classes.block}>
-          <Icon1 className={classes.icon} />
-          <Divider className={classes.line} />
-          <div className={classes.contentGroup}>
-            <Typography className={classes.content1}>Cutting-Edge</Typography>
-            <Typography className={classes.content2}>
-              ZK-Cryptography,
-            </Typography>
-            <Typography className={classes.content1}>
-              Ultimate Privacy
-            </Typography>
+      <div className={classes.totalBlock}>
+        <div className={classes.top}>
+          <div style={{ width: "488px" }}>
+            <span className={classes.title}>
+              In-Demand Assets that Maximize Revenue and Reduce Costs
+            </span>
           </div>
-          <div />
-        </div>
-        <div className={classes.block}>
-          <Icon2 className={classes.icon} />
-          <Divider className={classes.line} />
-          <div className={classes.contentGroup}>
-            <Typography className={classes.content1}>Advanced</Typography>
-            <Typography className={classes.content2}>
-              Programmability,
-            </Typography>
-            <Typography className={classes.content1}>
-              Seamless Compliance
-            </Typography>
+          <div style={{ width: "554px", paddingTop: "40px" }}>
+            <span className={classes.content}>
+              Proprietary technology powers a platform that delivers
+              unparalleled transparency and compliance, while maintaining
+              complete control over access and privacy along with optimized
+              transactions that drive down costs.
+            </span>
           </div>
-          <div />
         </div>
-        <div className={classes.block}>
-          <Icon3 className={classes.icon} />
-          <Divider className={classes.line} />
-          <div className={classes.contentGroup}>
-            <Typography className={classes.content1}>Unparalleled</Typography>
-            <Typography className={classes.content2}>Attestation,</Typography>
-            <Typography className={classes.content1}>
-              Unmatched Confidence
-            </Typography>
+        <div className={classes.bottom}>
+          <div className={classes.block}>
+            <Icon1 className={classes.icon} />
+            <Divider className={classes.line} />
+            <div className={classes.contentGroup}>
+              <Typography className={classes.content1}>Cutting-Edge</Typography>
+              <Typography className={classes.content2}>
+                ZK-Cryptography,
+              </Typography>
+              <Typography className={classes.content1}>
+                Ultimate Privacy
+              </Typography>
+            </div>
+            <div />
           </div>
-          <div />
+          <div className={classes.block}>
+            <Icon2 className={classes.icon} />
+            <Divider className={classes.line} />
+            <div className={classes.contentGroup}>
+              <Typography className={classes.content1}>Advanced</Typography>
+              <Typography className={classes.content2}>
+                Programmability,
+              </Typography>
+              <Typography className={classes.content1}>
+                Seamless Compliance
+              </Typography>
+            </div>
+            <div />
+          </div>
+          <div className={classes.block}>
+            <Icon3 className={classes.icon} />
+            <Divider className={classes.line} />
+            <div className={classes.contentGroup}>
+              <Typography className={classes.content1}>Unparalleled</Typography>
+              <Typography className={classes.content2}>Attestation,</Typography>
+              <Typography className={classes.content1}>
+                Unmatched Confidence
+              </Typography>
+            </div>
+            <div />
+          </div>
         </div>
       </div>
     </div>
