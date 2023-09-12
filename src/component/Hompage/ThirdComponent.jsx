@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Icon } from "../../assets/images/Group_11083.svg";
 import { makeStyles } from "@mui/styles";
+import { Button } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
@@ -82,20 +83,7 @@ const useStyles = makeStyles({
   listGroup: {
     paddingLeft: 69,
     paddingTop: 60,
-  },
-  // content2: {
-  //   color: "#FBA850",
-  //   fontSize: 22,
-  //   fontStyle: "normal",
-  //   fontWeight: 300,
-  //   lineHeight: "150%",
-  //   letterSpacing: 0.44,
-  // },
-  // block: {
-  //   width: 285,
-  //   height: 279,
-  //   marginRight: 115,
-  // },
+  }
 });
 const ThirdComponent = () => {
   const classes = useStyles();
@@ -128,6 +116,30 @@ const ThirdComponent = () => {
           <li className={classes.list}>Accessibility and Liquidity</li>
           <li className={classes.list}>Stable Value</li>
         </div>
+          <Button
+            sx={{
+              display: "block",
+              color: "white",
+              textAlign: "center",
+              fontFamily: "Rand",
+              fontSize: 16.5,
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "150%",
+              letterSpacing: 0.33,
+              textTransform: "capitalize",
+              borderRadius: 30,
+              paddingLeft: "15px",
+              paddingRight: "15px",
+              paddingTop: "10px",
+              paddingBottom: "10px",
+              marginTop: "73px",
+              marginLeft: "60px",
+              border: "0.75px solid #FFF",
+            }}
+          >
+            Request A Consultation
+          </Button>
       </div>
     </div>
   );
