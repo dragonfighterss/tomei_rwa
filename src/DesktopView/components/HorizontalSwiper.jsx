@@ -42,7 +42,7 @@ const HorizontalSwiper = ({ children }) => {
         enableMouseEvents
       >
         {React.Children.map(children, (child, i) => (
-          <div key={i} style={{ width: '100%', flexShrink: 0 }}>
+          <div key={i} style={{ width: '100%', flexShrink: 0, alignItems: "flex-start", color: "#fff"  }}>
             {child}
           </div>
         ))}

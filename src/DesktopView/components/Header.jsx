@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { ReactComponent as LogoName } from "../assets/images/Group_10830.svg";
-import { ReactComponent as LogoSymbol } from "../assets/images/T-Symbol1.svg";
+import { ReactComponent as LogoName } from "../../assets/images/Group_10830.svg";
+import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol1.svg";
 import { Button } from "@mui/material";
 
 const useStyles = makeStyles({
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
   button: {
     fontFamily: "Rand",
-    fontSize: "16.5",
+    fontSize: "16.5px",
     fontStyle: "normal",
     fontWeight: 500,
     lineHeight: "150%",

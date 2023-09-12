@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Img from "../../assets/images/image_72.png";
+import Img from "../../../assets/images/image_72.png";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({

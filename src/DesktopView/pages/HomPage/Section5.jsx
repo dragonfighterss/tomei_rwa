@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Icon1 } from "../../assets/images/Layer_1.svg";
-import { ReactComponent as Icon2 } from "../../assets/images/Group_11042.svg";
+import { ReactComponent as Icon1 } from "../../../assets/images/Layer_1.svg";
+import { ReactComponent as Icon2 } from "../../../assets/images/Group_11042.svg";
 import { Divider, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 

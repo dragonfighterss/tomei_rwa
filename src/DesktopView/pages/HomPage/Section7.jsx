@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as LogoName } from "../../assets/images/Group_10831.svg";
-import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol.svg";
+import { ReactComponent as LogoName } from "../../../assets/images/Group_10831.svg";
+import { ReactComponent as LogoSymbol } from "../../../assets/images/T-Symbol.svg";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({

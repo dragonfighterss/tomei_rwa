@@ -1,8 +1,8 @@
 import React from "react";
 import { Divider, Typography } from "@mui/material";
-import { ReactComponent as Icon1 } from "../../assets/images/Group _11084.svg";
-import { ReactComponent as Icon2 } from "../../assets/images/Group_11085.svg";
-import { ReactComponent as Icon3 } from "../../assets/images/Group _11086.svg";
+import { ReactComponent as Icon1 } from "../../../assets/images/Group _11084.svg";
+import { ReactComponent as Icon2 } from "../../../assets/images/Group_11085.svg";
+import { ReactComponent as Icon3 } from "../../../assets/images/Group _11086.svg";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -11,7 +11,6 @@ const useStyles = makeStyles({
     height: 900,
     backgroundColor: "#000",
     display: "flex",
-    // justifyContent: "center",
   },
   top: {
     paddingTop: 90,

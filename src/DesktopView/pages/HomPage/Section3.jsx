@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Icon } from "../../assets/images/Group_11083.svg";
+import { ReactComponent as Icon } from "../../../assets/images/Group_11083.svg";
 import { makeStyles } from "@mui/styles";
 import { Button } from "@mui/material";
 

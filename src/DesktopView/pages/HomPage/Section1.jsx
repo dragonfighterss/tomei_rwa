@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
-import BgImg from "../../assets/images/Bg1.png";
+import BgImg from "../../../assets/images/Bg1.png";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({

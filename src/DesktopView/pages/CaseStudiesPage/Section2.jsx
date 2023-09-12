@@ -1,10 +1,10 @@
 import React from "react";
-import Rectangle_1406 from "../../assets/images/Rectangle_1406.png";
-import Rectangle_1407 from "../../assets/images/Rectangle_1407.png";
-import Rectangle_1408 from "../../assets/images/Rectangle_1408.png";
-import { ReactComponent as TomeiTokenSymbol } from "../../assets/images/Tomei-TokenSymbol.svg";
-import { ReactComponent as GoldToken } from "../../assets/images/Gold_Token.svg";
-import { ReactComponent as RealEstateToken } from "../../assets/images/Real_Estate_Token.svg";
+import Rectangle_1406 from "../../../assets/images/Rectangle_1406.png";
+import Rectangle_1407 from "../../../assets/images/Rectangle_1407.png";
+import Rectangle_1408 from "../../../assets/images/Rectangle_1408.png";
+import { ReactComponent as TomeiTokenSymbol } from "../../../assets/images/Tomei-TokenSymbol.svg";
+import { ReactComponent as GoldToken } from "../../../assets/images/Gold_Token.svg";
+import { ReactComponent as RealEstateToken } from "../../../assets/images/Real_Estate_Token.svg";
 import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as LogoName } from "../../assets/images/Group_10831.svg";
-import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol.svg";
+import { ReactComponent as LogoName } from "../../../assets/images/Group_10831.svg";
+import { ReactComponent as LogoSymbol } from "../../../assets/images/T-Symbol.svg";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -15,7 +15,6 @@ const useStyles = makeStyles({
   logo: {
     width: 176,
     height: 100,
-    display: "flex",
     flexShrink: 0,
     flexDirection: "column",
   },
@@ -24,7 +23,7 @@ const useStyles = makeStyles({
     paddingLeft: 49,
   },
 });
-const Section4 = () => {
+const Section7 = () => {
   const classes = useStyles();
 
   return (
@@ -37,4 +36,4 @@ const Section4 = () => {
   );
 };
 
-export default Section4;
+export default Section7;

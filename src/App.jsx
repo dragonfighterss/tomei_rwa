@@ -1,37 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ConsultationModal from "./components/Consultation/ConsultationModal";
-import Homepage from "./pages/HomPage";
-import CaseStudiesPage from "./pages/CaseStudiesPage";
-import "./App.css";
+import DesktopView from "./DesktopView";
+import MobileView from "./MobileView";
+import MediaQuery from './context/mediaQuery'
 
 const theme = createTheme();
 
 function App() {
-  const [page, setPage] = useState("homepage");
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleChangePage = (nextPage) => {
-    setPage(nextPage);
-  };
-
+  const isMobile = MediaQuery();
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Header handleChangePage={handleChangePage} handleOpen={handleOpen} />
-        {page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
-        <ConsultationModal open={open} handleClose={handleClose} />
-        <Footer />
-      </div>
+      {isMobile ? <MobileView /> : <DesktopView />}
     </ThemeProvider>
   );
 }
