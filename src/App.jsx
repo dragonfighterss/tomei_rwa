@@ -76,6 +76,7 @@ function App() {
           onClose={handleClose}
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
+          sx={{ position: "absolute" }}
         >
           <Box className={classes.modal}>
             <div className={classes.modalHeader} id="modal-modal-title">
@@ -138,18 +139,18 @@ function App() {
               >
                 info@tomei.network
               </Button>
-                <Button
-                  color="inherit"
-                  sx={{
-                    paddingTop: "27px",
-                    height: "5px",
-                    float: "left !important",
-                    color:"white",
-                    textDecoration: "underline"
-                  }}
-                >
-                  Close
-                </Button>
+              <Button
+                color="inherit"
+                sx={{
+                  paddingTop: "27px",
+                  height: "5px",
+                  float: "left !important",
+                  color: "white",
+                  textDecoration: "underline",
+                }}
+              >
+                Close
+              </Button>
             </Box>
           </Box>
         </Modal>

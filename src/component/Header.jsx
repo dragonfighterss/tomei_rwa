@@ -50,14 +50,14 @@ const Header = (props) => {
       <div className={classes.btnGroup}>
         <Button
           className={classes.button}
-          onClick={props.handleChangePage}
+          onClick={()=>props.handleChangePage("homepage")}
           sx={{ color: "white" }}
         >
           Technology
         </Button>
         <Button
           className={classes.button}
-          onClick={props.handleChangePage}
+          onClick={()=>props.handleChangePage("caseStudiesPage")}
           sx={{ color: "white", paddingLeft: "30px" }}
         >
           Case Studies
