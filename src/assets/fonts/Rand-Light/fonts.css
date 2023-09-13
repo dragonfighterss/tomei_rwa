@@ -20,8 +20,8 @@
 
   @font-face {
   font-family: 'Rand';
-  src: url('Rand-Light.eot');
-  src: url('Rand-Light.eot?#iefix') format('embedded-opentype'),
+  src: url('Rand-Light.otf');
+  src: url('Rand-Light.otf?#iefix') format('embedded-opentype'),
        url('Rand-Light.woff2') format('woff2'),
        url('Rand-Light.woff') format('woff');
   font-weight: 300;
