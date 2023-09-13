@@ -1,17 +1,12 @@
 import React from "react";
 import { Divider } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import HorizontalSwiper from "../../components/HorizontalSwiper";
-import AppContent from "../../components/AppContent";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
     height: 1150,
     backgroundColor: "#000",
-    // display: "flex",
-    // justifyContent: "center",
-    // alignItems: "center",
   },
   block: {
     paddingTop: "5%",
@@ -69,9 +64,7 @@ const Section6 = () => {
         <div className={classes.title}>Technology</div>
         <div className={classes.subTitle}>The Power of Programmable ZK</div>
         <div classes={classes.content}>
-          <HorizontalSwiper>
-            <AppContent />
-          </HorizontalSwiper>
+       
         </div>
         <Divider className={classes.line} />
         <div className={classes.subDescription}>

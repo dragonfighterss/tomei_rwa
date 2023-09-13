@@ -12,12 +12,12 @@ const useStyles = makeStyles({
     height: 100,
   },
   logo: {
-    width: 219.188,
-    height: 28,
+    width: 419.188,
+    // height: 28,
     paddingTop: 36,
     paddingLeft: 160,
-    justifyContent: "center",
-    alignItems: "center",
+    // justifyContent: "center",
+    // alignItems: "center",
     gap: 24.037,
     flexShrink: 0,
   },
@@ -39,6 +39,7 @@ const useStyles = makeStyles({
   },
   LogoSymbol: {
     paddingRight: 20,
+    paddingTop: 13,
   },
 });
 

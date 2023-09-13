@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/Consultation/ConsultationModal";
-import Homepage from "./pages/HomPage";
+import Homepage from "./pages/HomePage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 
 const DesktopView = () => {
@@ -20,7 +20,7 @@ const DesktopView = () => {
       setPage(nextPage);
     };
   return (
-    <div className="DesktopView" style={{ overflowX: "hidden" }}>
+    <div className="DesktopView">
         <Header handleChangePage={handleChangePage} handleOpen={handleOpen} />
         {page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
         <ConsultationModal open={open} handleClose={handleClose} />
