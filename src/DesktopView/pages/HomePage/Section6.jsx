@@ -40,16 +40,28 @@ const calcDynamicHeight = (objectWidth) => {
 };
 
 const handleDynamicHeight = (ref, setDynamicHeight) => {
-  const objectWidth = ref.current.scrollWidth;
-  const dynamicHeight = calcDynamicHeight(objectWidth);
-  setDynamicHeight(dynamicHeight);
+  try {
+    if (ref?.current) {
+      const objectWidth = ref.current.scrollWidth;
+      const dynamicHeight = calcDynamicHeight(objectWidth);
+      setDynamicHeight(dynamicHeight);
+    }
+  } catch (e) {
+    // console.log("--------- handle dynamice height ---", e);
+  }
 };
 
 const applyScrollListener = (ref, setTranslateX) => {
-  window.addEventListener("scroll", () => {
-    const offsetTop = -ref.current.offsetTop;
-    setTranslateX(offsetTop);
-  });
+  try {
+    window.addEventListener("scroll", () => {
+      if (ref?.current) {
+        const offsetTop = -ref.current.offsetTop;
+        setTranslateX(offsetTop);
+      }
+    });
+  } catch (e) {
+    console.log("-------- apply scroll listener ---", e);
+  }
 };
 
 const useStyles = makeStyles({
