@@ -104,7 +104,7 @@ const useStyles = makeStyles({
   },
   line: {
     background: "#FFF",
-    width: 1120,
+    width: "93%",
     height: 1,
   },
   content: {
@@ -113,15 +113,37 @@ const useStyles = makeStyles({
     paddingTop: 146,
   },
   card: {
-    height: 300,
-    width: 500,
+    width: "58%",
+    position: "relative",
+    height: 374,
+    backgroundColor: "#000",
+    marginRight: 30,
+    flexShrink: 0,
+    paddingLeft: "5%",
+  },
+  card1: {
+    height: 374,
+    position: "relative",
+    width: "24%",
+    backgroundColor: "#000",
+    flexShrink: 0,
   },
   cardLine: {
     background: "#FFF",
-    width: 610,
-    height: 0.638,
+    width: "100%",
+    height: 2,
+  },
+  cardLine1: {
+    background: "#FFF",
+    width: "100%",
+    height: 2,
+    opacity: "15%",
   },
   numberIcon: {
+    paddingBottom: 30,
+  },
+  numberIcon1: {
+    opacity: "15%",
     paddingBottom: 30,
   },
   cardTitle: {
@@ -158,31 +180,21 @@ const useStyles = makeStyles({
     position: "absolute",
     marginLeft: -30,
   },
+  cardContainer: {
+    position: "relative",
+    height: "100%",
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
 });
-
-const CardsContainer = styled.div`
-  position: relative;
-  height: 100%;
-  padding: 0 0 0 150px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const SampleCard = styled.div`
-  position: relative;
-  height: 374px;
-  width: 610px;
-  background-color: #000;
-  margin-right: 75px;
-  flex-shrink: 0;
-`;
 
 const Section6 = () => {
   const classes = useStyles();
   const [dynamicHeight, setDynamicHeight] = useState(null);
   const [translateX, setTranslateX] = useState(0);
+  const [currentCard, setCurrentCard] = useState(1);
 
   const containerRef = useRef(null);
   const objectRef = useRef(null);
@@ -196,6 +208,19 @@ const Section6 = () => {
     window.addEventListener("resize", resizeHandler);
     applyScrollListener(containerRef, setTranslateX);
   }, []);
+  useEffect(() => {
+    let cardWidth = window.innerWidth * 0.1;
+    if (0 < -translateX && -translateX < cardWidth) {
+      setCurrentCard(1);
+    } else if (cardWidth < -translateX && -translateX < cardWidth * 2) {
+      setCurrentCard(2);
+    } else if (cardWidth * 2 < -translateX && -translateX < cardWidth * 2.5) {
+      setCurrentCard(3);
+    } else if (cardWidth * 2.5 < -translateX && -translateX < cardWidth * 3) {
+      setCurrentCard(4);
+    }
+  }, [translateX]);
+
   return (
     <div className={classes.root}>
       <TallOuterContainer dynamicHeight={dynamicHeight}>
@@ -208,59 +233,122 @@ const Section6 = () => {
                 translateX={translateX}
                 ref={objectRef}
               >
-                <CardsContainer>
-                  <SampleCard>
-                    <FirstNumIcon className={classes.numberIcon} />
-                    <Divider className={classes.cardLine} />
-                    <div className={classes.cardTitleBg}>
-                      <div className={classes.cardTitle}>Asset On Boarding</div>
-                      <RightArrowIcon className={classes.rightArrowIcon} />
-                    </div>
-                    <div className={classes.cardDescription}>
-                      Asset Onboarding (ZK DOCS): Import ownership and policies
-                      securely.
-                    </div>
-                  </SampleCard>
-                  <SampleCard>
-                    <SecondNumIcon className={classes.numberIcon} />
-                    <Divider className={classes.cardLine} />
-                    <div className={classes.cardTitleBg}>
-                      <LeftArrowIcon className={classes.leftArrowIcon} />
-                      <div className={classes.cardTitle}>Automation</div>
-                      <RightArrowIcon className={classes.rightArrowIcon} />
-                    </div>
-
-                    <div className={classes.cardDescription}>
-                      Mint tokens in compliance with KYC requirements.
-                    </div>
-                  </SampleCard>
-                  <SampleCard>
-                    <ThirdNumIcon className={classes.numberIcon} />
-                    <Divider className={classes.cardLine} />
-                    <div className={classes.cardTitleBg}>
-                      <LeftArrowIcon className={classes.leftArrowIcon} />
-                      <div className={classes.cardTitle}>Valuation</div>
-                      <RightArrowIcon className={classes.rightArrowIcon} />
-                    </div>
-
-                    <div className={classes.cardDescription}>
-                      Verify asset valuations with best-in-class oracles.
-                    </div>
-                  </SampleCard>
-                  <SampleCard>
-                    <FourthNumIcon className={classes.numberIcon} />
-                    <Divider className={classes.cardLine} />
-                    <div className={classes.cardTitleBg}>
-                      <LeftArrowIcon className={classes.leftArrowIcon} />
-                      <div className={classes.cardTitle}>Markets</div>
-                      <RightArrowIcon className={classes.rightArrowIcon} />
-                    </div>
-
-                    <div className={classes.cardDescription}>
-                      Support for initial and secondary offerings.
-                    </div>
-                  </SampleCard>
-                </CardsContainer>
+                <div className={classes.cardContainer}>
+                  <div
+                    className={currentCard === 1 ? classes.card : classes.card1}
+                  >
+                    <FirstNumIcon
+                      className={
+                        currentCard === 1
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 1 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 1 && (
+                      <div className={classes.cardTitleBg}>
+                        <div className={classes.cardTitle}>
+                          Asset On Boarding
+                        </div>
+                        <RightArrowIcon className={classes.rightArrowIcon} />
+                      </div>
+                    )}
+                    {currentCard === 1 && (
+                      <div className={classes.cardDescription}>
+                        Asset Onboarding (ZK DOCS): Import ownership and
+                        policies securely.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 2 ? classes.card : classes.card1}
+                  >
+                    <SecondNumIcon
+                      className={
+                        currentCard === 2
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 2 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 2 && (
+                      <div className={classes.cardTitleBg}>
+                        <LeftArrowIcon className={classes.leftArrowIcon} />
+                        <div className={classes.cardTitle}>Automation</div>
+                        <RightArrowIcon className={classes.rightArrowIcon} />
+                      </div>
+                    )}
+                    {currentCard === 2 && (
+                      <div className={classes.cardDescription}>
+                        Mint tokens in compliance with KYC requirements.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 3 ? classes.card : classes.card1}
+                  >
+                    <ThirdNumIcon
+                      className={
+                        currentCard === 3
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 3 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 3 && (
+                      <div className={classes.cardTitleBg}>
+                        <LeftArrowIcon className={classes.leftArrowIcon} />
+                        <div className={classes.cardTitle}>Valuation</div>
+                        <RightArrowIcon className={classes.rightArrowIcon} />
+                      </div>
+                    )}
+                    {currentCard === 3 && (
+                      <div className={classes.cardDescription}>
+                        Verify asset valuations with best-in-class oracles.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 4 ? classes.card : classes.card1}
+                  >
+                    <FourthNumIcon
+                      className={
+                        currentCard === 4
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 4 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 4 && (
+                      <div className={classes.cardTitleBg}>
+                        <LeftArrowIcon className={classes.leftArrowIcon} />
+                        <div className={classes.cardTitle}>Markets</div>
+                        <RightArrowIcon className={classes.rightArrowIcon} />
+                      </div>
+                    )}
+                    {currentCard === 4 && (
+                      <div className={classes.cardDescription}>
+                        Support for initial and secondary offerings.
+                      </div>
+                    )}
+                  </div>
+                </div>
               </HorizontalTranslateContainer>
             </div>
             <Divider className={classes.line} />
