@@ -19,6 +19,7 @@ const MobileView = () => {
   };
 
   const handleChangePage = (nextPage) => {
+    setMenuOpen(false);
     setPage(nextPage);
   };
 
@@ -29,10 +30,15 @@ const MobileView = () => {
   return (
     <div className="MobileView" style={{ overflowX: "hidden" }}>
       <Header handleOpenMemu={handleOpenMemu} />
-      <MenuPage />
-      {/* {page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
-      <ConsultationModal open={open} handleClose={handleClose} /> */}
-      {/* <Footer /> */}
+      {menuOpen ? (
+        <MenuPage handleChangePage={handleChangePage} handleOpen={handleOpen} />
+      ) : page === "homepage" ? (
+        <Homepage />
+      ) : (
+        <CaseStudiesPage />
+      )}
+      <ConsultationModal open={open} handleClose={handleClose} />
+      {!menuOpen && <Footer />}
     </div>
   );
 };

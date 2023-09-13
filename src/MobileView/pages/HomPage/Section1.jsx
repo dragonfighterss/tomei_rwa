@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Box } from "@mui/material";
-import BgImg from "../../../assets/images/Bg1.png";
+import BgImg from "../../../assets/images/Rectangle_1406_1.png";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 640,
+    height: 1120,
   },
   slogon: {
     color: "#fff",
@@ -22,17 +22,17 @@ const useStyles = makeStyles({
     height: 150,
   },
   btnGroup: {
-    height: 189,
+    height: 480,
     flexShrink: 0,
     opacity: 0.8,
     background: "#0A0A0A",
-    paddingLeft: 160,
-    paddingTop: 71,
+    paddingLeft: 34,
+    paddingTop: 80,
   },
   sloginBg: {
     height: 150,
     width: 315,
-    marginTop: -639,
+    marginTop: -474,
     paddingLeft: 30,
     position: "absolute",
   },
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
     position: "absolute",
   },
   imgBg: {
-    height: 760,
+    height: 640,
     background: "#010552",
     mixBlendMode: "exclusion",
   },
@@ -75,7 +75,7 @@ const Section1 = () => {
         component="div"
         sx={{
           width: "100%",
-          height: "1020px",
+          height: "1120px",
           backgroundImage: `url(${BgImg})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -94,7 +94,9 @@ const Section1 = () => {
           </div>
           <div
             style={{
-              display: "flex",
+              //  display: "flex",
+              flexShrink: 0,
+              // flexDirection: "column",
               paddingTop: "48px",
               paddingBottom: "72px",
             }}
@@ -116,6 +118,7 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                marginBottom: "20px",
               }}
             >
               Banks and INSURANCE
@@ -137,6 +140,7 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                marginBottom: "20px",
               }}
             >
               PRIVATE EQUITY
@@ -158,6 +162,7 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                marginBottom: "20px",
               }}
             >
               ASSET MANAGERS

@@ -8,7 +8,7 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 900,
+    height: 1720,
     backgroundColor: "#000",
     display: "flex",
   },
@@ -37,11 +37,9 @@ const useStyles = makeStyles({
     letterSpacing: 0.35,
   },
   bottom: {
-    height: 760,
-    width: 1000,
-    paddingTop: 132,
-    display: "inline-flex",
-    alignItems: "flex-start",
+    height: 279,
+    width: 315,
+    paddingTop: 80,
   },
   line: {
     background: "#FFF",
@@ -52,7 +50,7 @@ const useStyles = makeStyles({
     paddingBottom: 50,
   },
   contentGroup: {
-    paddingTop: 50,
+    paddingTop: 80,
   },
   content1: {
     color: "#FAFAFA",
@@ -71,9 +69,10 @@ const useStyles = makeStyles({
     letterSpacing: 0.44,
   },
   block: {
-    width: 285,
+    width: 315,
     height: 279,
     marginRight: 115,
+    paddingBottom: 80,
   },
 });
 const Section2 = () => {
@@ -83,12 +82,12 @@ const Section2 = () => {
     <div className={classes.root}>
       <div className={classes.totalBlock}>
         <div className={classes.top}>
-          <div style={{ width: "488px" }}>
+          <div style={{ width: "311px" }}>
             <span className={classes.title}>
               In-Demand Assets that Maximize Revenue and Reduce Costs
             </span>
           </div>
-          <div style={{ width: "554px", paddingTop: "40px" }}>
+          <div style={{ width: "315px", paddingTop: "80px" }}>
             <span className={classes.content}>
               Proprietary technology powers a platform that delivers
               unparalleled transparency and compliance, while maintaining
