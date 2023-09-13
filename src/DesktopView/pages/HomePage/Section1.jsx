@@ -116,6 +116,10 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                ":hover": {
+                  bgcolor: "#AF5",
+                  color: "white",
+                },
               }}
             >
               Banks and INSURANCE
@@ -137,6 +141,10 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                ":hover": {
+                  bgcolor: "#AF5",
+                  color: "white",
+                },
               }}
             >
               PRIVATE EQUITY
@@ -158,6 +166,10 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                ":hover": {
+                  bgcolor: "#AF5",
+                  color: "white",
+                },
               }}
             >
               ASSET MANAGERS
@@ -179,6 +191,10 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                ":hover": {
+                  bgcolor: "#AF5",
+                  color: "white",
+                },
               }}
             >
               FAMILY OFFICE
