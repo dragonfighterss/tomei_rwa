@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as Icon } from "../../../assets/images/Group_11083.svg";
 import { makeStyles } from "@mui/styles";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
@@ -9,6 +9,7 @@ const useStyles = makeStyles({
     height: 800,
     display: "inline-flex",
     alignItems: "flex-start",
+    flexGrow: 1,
   },
   left: {
     width: "50%",
@@ -19,6 +20,7 @@ const useStyles = makeStyles({
     width: "50%",
     height: 800,
     backgroundColor: "#141414",
+    boxSizing: "content-box",
   },
   title: {
     color: "#FFF",
@@ -31,8 +33,9 @@ const useStyles = makeStyles({
     textTransform: "capitalize",
   },
   titleBg: {
+    width: "100%",
     paddingTop: 140,
-    paddingLeft: 160,
+    // position: "absolute",
   },
   content1: {
     color: "#fff",
@@ -90,19 +93,23 @@ const Section3 = () => {
 
   return (
     <div className={classes.root}>
+      
       <div className={classes.left}>
-        <div className={classes.titleBg}>
-          <span className={classes.title}>Tomei creates liquidity</span>
-          <div className={classes.content1_bg}>
-            <span className={classes.content1}>Institutional Investors</span>
-          </div>
-          <div>
-            <Icon />
-            <span className={classes.content2}>Individual Investors</span>
-          </div>
+        <div className={classes.titleBg} style={{maxWidth: '700px',float: "right"}}>
+          <Container maxWidth="lg">
+            <span className={classes.title}>Tomei creates liquidity</span>
+            <div className={classes.content1_bg}>
+              <span className={classes.content1}>Institutional Investors</span>
+            </div>
+            <div>
+              <Icon />
+              <span className={classes.content2}>Individual Investors</span>
+            </div>
+          </Container>
         </div>
       </div>
       <div className={classes.right}>
+        <div style={{maxWidth: '600px'}} >
         <div className={classes.description}>
           For individual investors Tomei unlocks the power of elite investments:
           Tokenization shatters the high barriers to entry for alternative
@@ -140,6 +147,7 @@ const Section3 = () => {
         >
           Request A Consultation
         </Button>
+      </div>
       </div>
     </div>
   );

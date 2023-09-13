@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Typography } from "@mui/material";
+import { Divider, Typography, Container } from "@mui/material";
 import { ReactComponent as Icon1 } from "../../../assets/images/Group _11084.svg";
 import { ReactComponent as Icon2 } from "../../../assets/images/Group_11085.svg";
 import { ReactComponent as Icon3 } from "../../../assets/images/Group _11086.svg";
@@ -14,9 +14,6 @@ const useStyles = makeStyles({
   },
   top: {
     paddingTop: 90,
-  },
-  totalBlock: {
-    paddingLeft: "10%",
   },
   title: {
     color: "#fff",
@@ -81,7 +78,7 @@ const Section2 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.totalBlock}>
+      <Container maxWidth="lg">
         <div className={classes.top}>
           <div style={{ width: "488px" }}>
             <span className={classes.title}>
@@ -139,7 +136,7 @@ const Section2 = () => {
             <div />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import { ReactComponent as LogoName } from "../../assets/images/Group_10830.svg";
 import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol1.svg";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 
 const useStyles = makeStyles({
   header: {
@@ -13,11 +13,7 @@ const useStyles = makeStyles({
   },
   logo: {
     width: 419.188,
-    // height: 28,
     paddingTop: 36,
-    paddingLeft: 160,
-    // justifyContent: "center",
-    // alignItems: "center",
     gap: 24.037,
     flexShrink: 0,
   },
@@ -38,8 +34,15 @@ const useStyles = makeStyles({
     marginRight: 160,
   },
   LogoSymbol: {
-    paddingRight: 20,
-    paddingTop: 13,
+    width: 42,
+    height: 28,
+  },
+  LogoName: {
+    marginTop: 7,
+    position: "absolute",
+    width: 153,
+    height: 15,
+    paddingLeft: 20,
   },
 });
 
@@ -47,32 +50,36 @@ const Header = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.header}>
-      <div className={classes.logo}>
-        <LogoSymbol className={classes.LogoSymbol} />
-        <LogoName />
-      </div>
+      <Container maxWidth="lg">
+        <div className={classes.logo}>
+          <LogoSymbol className={classes.LogoSymbol} />
+          <LogoName className={classes.LogoName} />
+        </div>
+      </Container>
       <div className={classes.btnGroup}>
-        <Button
-          className={classes.button}
-          onClick={() => props.handleChangePage("homepage")}
-          sx={{ color: "white" }}
-        >
-          Technology
-        </Button>
-        <Button
-          className={classes.button}
-          onClick={() => props.handleChangePage("caseStudiesPage")}
-          sx={{ color: "white", paddingLeft: "30px" }}
-        >
-          Case Studies
-        </Button>
-        <Button
-          className={classes.button}
-          onClick={props.handleOpen}
-          sx={{ color: "white", paddingLeft: "30px" }}
-        >
-          Consultation
-        </Button>
+        <Container maxWidth="lg">
+          <Button
+            className={classes.button}
+            onClick={() => props.handleChangePage("homepage")}
+            sx={{ color: "white" }}
+          >
+            Technology
+          </Button>
+          <Button
+            className={classes.button}
+            onClick={() => props.handleChangePage("caseStudiesPage")}
+            sx={{ color: "white", paddingLeft: "30px" }}
+          >
+            Case Studies
+          </Button>
+          <Button
+            className={classes.button}
+            onClick={props.handleOpen}
+            sx={{ color: "white", paddingLeft: "30px" }}
+          >
+            Consultation
+          </Button>
+        </Container>
       </div>
     </div>
   );

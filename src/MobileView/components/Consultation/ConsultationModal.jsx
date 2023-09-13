@@ -11,12 +11,10 @@ const useStyles = makeStyles({
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "100%",
-    height: 900,
+    height: 600,
     border: "2px solid #000",
-    boxShadow: 24,
     p: 4,
-    borderRadius: "30px",
-    marginTop: 60,
+    marginTop: 176,
   },
   modalHeader: {
     marginTop: 38,
@@ -81,12 +79,9 @@ const ConsultationModal = (props) => {
               lineHeight: "150%",
               letterSpacing: 0.44,
               borderRadius: 20,
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              paddingTop: "20px",
-              paddingBottom: "20px",
+              padding:"20px 50px 20px 50px",
               border: "1px solid #D9D9D9",
-              width: "400px",
+              width: "314px",
             }}
           >
             Calend.ly
@@ -103,13 +98,10 @@ const ConsultationModal = (props) => {
               lineHeight: "150%",
               letterSpacing: 0.44,
               borderRadius: 20,
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              paddingTop: "20px",
-              paddingBottom: "20px",
+              padding:"20px 25px 20px 25px",
               border: "1px solid #D9D9D9",
               marginTop: "20px",
-              width: "400px",
+              width: "314px",
             }}
           >
             info@tomei.network

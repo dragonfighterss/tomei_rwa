@@ -3,11 +3,11 @@ import { makeStyles } from "@mui/styles";
 import { ReactComponent as LogoName } from "../../assets/images/Group_10830.svg";
 import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol1.svg";
 import { ReactComponent as MenuIcon } from "../../assets/images/Group_11098.svg";
-// import { Button } from "@mui/material";
+import { Container } from "@mui/material";
 
 const useStyles = makeStyles({
   header: {
-    display: "flex",
+    // display: "flex",
     background: "#000000",
     color: "#FFF",
     height: 60,

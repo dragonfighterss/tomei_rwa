@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as Icon1 } from "../../../assets/images/Layer_1.svg";
 import { ReactComponent as Icon2 } from "../../../assets/images/Group_11042.svg";
-import { Divider, Typography } from "@mui/material";
+import { Divider, Typography, Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     height: 480,
     backgroundColor: "#141414",
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
   },
   title: {
@@ -60,32 +59,34 @@ const Section5 = () => {
 
   return (
     <div className={classes.root}>
-      <div>
+      <Container maxWidth="lg">
         <div>
-          <div style={{ width: "585px" }}>
-            <span className={classes.title}>Strategic investors</span>
+          <div>
+            <div style={{ width: "585px" }}>
+              <span className={classes.title}>Strategic investors</span>
+            </div>
+          </div>
+          <div className={classes.bottom}>
+            <div className={classes.block}>
+              <Icon1 className={classes.icon} />
+              <Divider className={classes.line} />
+              <Typography className={classes.content}>
+                Susquehanna Private Equity Investments, LLLP
+              </Typography>
+              <div />
+            </div>
+            <div className={classes.block}>
+              <Icon2 className={classes.icon} />
+              <Divider className={classes.line} />
+              <Typography className={classes.content}>
+                Republic Capital, the worlds largest private marketplace with
+                2.5M users
+              </Typography>
+              <div />
+            </div>
           </div>
         </div>
-        <div className={classes.bottom}>
-          <div className={classes.block}>
-            <Icon1 className={classes.icon} />
-            <Divider className={classes.line} />
-            <Typography className={classes.content}>
-              Susquehanna Private Equity Investments, LLLP
-            </Typography>
-            <div />
-          </div>
-          <div className={classes.block}>
-            <Icon2 className={classes.icon} />
-            <Divider className={classes.line} />
-            <Typography className={classes.content}>
-              Republic Capital, the worlds largest private marketplace with 2.5M
-              users
-            </Typography>
-            <div />
-          </div>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 };

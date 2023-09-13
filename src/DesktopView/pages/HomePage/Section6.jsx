@@ -67,7 +67,7 @@ const useStyles = makeStyles({
   },
   block: {
     paddingTop: "5%",
-    paddingLeft: "5%",
+    paddingLeft: "10.9%",
   },
   title: {
     color: "#fff",
@@ -101,6 +101,7 @@ const useStyles = makeStyles({
     letterSpacing: 0.56,
     paddingTop: 21,
     textTransform: "uppercase",
+    paddingBottom: 160,
   },
   line: {
     background: "#FFF",
@@ -113,13 +114,12 @@ const useStyles = makeStyles({
     paddingTop: 146,
   },
   card: {
-    width: "58%",
+    width: "48%",
     position: "relative",
     height: 374,
     backgroundColor: "#000",
     marginRight: 30,
     flexShrink: 0,
-    paddingLeft: "5%",
   },
   card1: {
     height: 374,
@@ -187,6 +187,7 @@ const useStyles = makeStyles({
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
     alignItems: "center",
+    paddingRight:"300px"
   },
 });
 
@@ -225,6 +226,7 @@ const Section6 = () => {
     <div className={classes.root}>
       <TallOuterContainer dynamicHeight={dynamicHeight}>
         <StickyInnerContainer ref={containerRef}>
+          
           <div className={classes.block}>
             <div className={classes.title}>Technology</div>
             <div className={classes.subTitle}>The Power of Programmable ZK</div>

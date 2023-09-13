@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     lineHeight: "100%",
     letterSpacing: 0.22,
     marginLeft: 30,
-    marginTop: 69,
+    marginTop: 64,
   },
   rightSpan: {
     display: "flex",
@@ -41,10 +41,10 @@ const Footer = () => {
     <div className={classes.footer}>
       <span className={classes.span1}>A Jiritsu Product</span>
       <div className={classes.rightSpan}>
-        <span className={classes.span2}>All Rights Reserved</span>
-        <span className={classes.span2}>
+        <span className={classes.span2}>All Rights Reserved. Tomei RWA 2023</span>
+        {/* <span className={classes.span2}>
           Legal copy as needed. lorem upsum dolore set amut.
-        </span>
+        </span> */}
       </div>
     </div>
   );

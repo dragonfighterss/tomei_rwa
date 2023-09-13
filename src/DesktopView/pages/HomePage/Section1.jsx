@@ -1,40 +1,101 @@
 import React from "react";
-import { Button, Box } from "@mui/material";
+import { Button, Box, Container } from "@mui/material";
 import BgImg from "../../../assets/images/Bg1.png";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: 1020,
   },
   slogon: {
-    color: "#fff",
-    leadingTrim: "both",
-    textEdge: "cap",
-    fontFamily: "Rand",
-    fontSize: 150,
-    fontStyle: "normal",
-    fontWeight: 250,
-    lineHeight: "160px",
-    letterSpacing: 3,
-    textTransform: "capitalize",
-    height: 300,
+    [theme.breakpoints.up("sm")]: {
+      color: "#fff",
+      leadingTrim: "both",
+      textEdge: "cap",
+      fontFamily: "Rand",
+      fontSize: 80,
+      fontStyle: "normal",
+      fontWeight: 250,
+      lineHeight: "160px",
+      letterSpacing: 3,
+      textTransform: "capitalize",
+      height: 300,
+    },
+    [theme.breakpoints.up("md")]: {
+      color: "#fff",
+      leadingTrim: "both",
+      textEdge: "cap",
+      fontFamily: "Rand",
+      fontSize: 120,
+      fontStyle: "normal",
+      fontWeight: 250,
+      lineHeight: "160px",
+      letterSpacing: 3,
+      textTransform: "capitalize",
+      height: 300,
+    },
+    [theme.breakpoints.up("lg")]: {
+      color: "#fff",
+      leadingTrim: "both",
+      textEdge: "cap",
+      fontFamily: "Rand",
+      fontSize: 149,
+      fontStyle: "normal",
+      fontWeight: 250,
+      lineHeight: "160px",
+      letterSpacing: 3,
+      textTransform: "capitalize",
+      height: 300,
+    },
+    [theme.breakpoints.up("xl")]: {
+      color: "#fff",
+      leadingTrim: "both",
+      textEdge: "cap",
+      fontFamily: "Rand",
+      fontSize: 149,
+      fontStyle: "normal",
+      fontWeight: 250,
+      lineHeight: "160px",
+      letterSpacing: 3,
+      textTransform: "capitalize",
+      height: 300,
+      marginLeft: 12,
+      width: 1500,
+    },
   },
   btnGroup: {
-    height: 189,
+    width: "100%",
+    height: 260,
     flexShrink: 0,
     opacity: 0.8,
     background: "#0A0A0A",
-    paddingLeft: 160,
     paddingTop: 71,
   },
   sloginBg: {
-    height: 630,
-    width: 1008,
-    marginTop: -639,
-    paddingLeft: 148,
-    position: "absolute",
+    [theme.breakpoints.up("sm")]: {
+      height: 630,
+      marginTop: -639,
+      position: "absolute",
+      marginLeft: -15,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 630,
+      marginTop: -639,
+      position: "absolute",
+      marginLeft: -15,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 630,
+      marginTop: -639,
+      position: "absolute",
+      marginLeft: -15,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 630,
+      marginTop: -639,
+      position: "absolute",
+    },
   },
   letter: {
     color: "#FFF",
@@ -65,7 +126,7 @@ const useStyles = makeStyles({
     background: "#010552",
     mixBlendMode: "exclusion",
   },
-});
+}));
 const Section1 = () => {
   const classes = useStyles();
 
@@ -83,123 +144,128 @@ const Section1 = () => {
         }}
       >
         <div className={classes.imgBg}></div>
-        <div className={classes.sloginBg}>
-          <span className={classes.slogon}>
-            The World`s Most Valuable RWA Tokens
-          </span>
-        </div>
+        <Container maxWidth="lg">
+          <div className={classes.sloginBg}>
+            <span className={classes.slogon}>
+              The World`s Most Valuable RWA Tokens
+            </span>
+          </div>
+        </Container>
+
         <div className={classes.btnGroup}>
-          <div>
-            <span className={classes.letter}>Get Started</span>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              paddingTop: "48px",
-              paddingBottom: "72px",
-            }}
-          >
-            <Button
-              sx={{
-                backgroundColor: "#FFF",
-                color: "#000",
-                fontFamily: "Rapid ST Trial",
-                fontSize: "17px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "100%",
-                letterSpacing: 0.56,
-                textTransform: "uppercase",
-                padding: "15px 20px",
-                alignItems: "flex-start",
-                gap: "10px",
-                borderRadius: "4px",
-                marginRight: "20px",
-                height: "50px",
-                ":hover": {
-                  bgcolor: "#AF5",
-                  color: "white",
-                },
+          <Container maxWidth="lg">
+            <div>
+              <span className={classes.letter}>Get Started</span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                paddingTop: "48px",
+                paddingBottom: "72px",
               }}
             >
-              Banks and INSURANCE
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "#FFF",
-                color: "#000",
-                fontFamily: "Rapid ST Trial",
-                fontSize: "17px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "100%",
-                letterSpacing: 0.56,
-                textTransform: "uppercase",
-                padding: "15px 20px",
-                alignItems: "flex-start",
-                gap: "10px",
-                borderRadius: "4px",
-                marginRight: "20px",
-                height: "50px",
-                ":hover": {
-                  bgcolor: "#AF5",
-                  color: "white",
-                },
-              }}
-            >
-              PRIVATE EQUITY
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "#FFF",
-                color: "#000",
-                fontFamily: "Rapid ST Trial",
-                fontSize: "17px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "100%",
-                letterSpacing: 0.56,
-                textTransform: "uppercase",
-                padding: "15px 20px",
-                alignItems: "flex-start",
-                gap: "10px",
-                borderRadius: "4px",
-                marginRight: "20px",
-                height: "50px",
-                ":hover": {
-                  bgcolor: "#AF5",
-                  color: "white",
-                },
-              }}
-            >
-              ASSET MANAGERS
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "#FFF",
-                color: "#000",
-                fontFamily: "Rapid ST Trial",
-                fontSize: "17px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "100%",
-                letterSpacing: 0.56,
-                textTransform: "uppercase",
-                padding: "15px 20px",
-                alignItems: "flex-start",
-                gap: "10px",
-                borderRadius: "4px",
-                marginRight: "20px",
-                height: "50px",
-                ":hover": {
-                  bgcolor: "#AF5",
-                  color: "white",
-                },
-              }}
-            >
-              FAMILY OFFICE
-            </Button>
-          </div>
+              <Button
+                sx={{
+                  backgroundColor: "#FFF",
+                  color: "#000",
+                  fontFamily: "Rapid ST Trial",
+                  fontSize: "17px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "100%",
+                  letterSpacing: 0.56,
+                  textTransform: "uppercase",
+                  padding: "15px 20px",
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  borderRadius: "4px",
+                  marginRight: "20px",
+                  height: "50px",
+                  ":hover": {
+                    bgcolor: "#AF5",
+                    color: "white",
+                  },
+                }}
+              >
+                Banks and INSURANCE
+              </Button>
+              <Button
+                sx={{
+                  backgroundColor: "#FFF",
+                  color: "#000",
+                  fontFamily: "Rapid ST Trial",
+                  fontSize: "17px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "100%",
+                  letterSpacing: 0.56,
+                  textTransform: "uppercase",
+                  padding: "15px 20px",
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  borderRadius: "4px",
+                  marginRight: "20px",
+                  height: "50px",
+                  ":hover": {
+                    bgcolor: "#AF5",
+                    color: "white",
+                  },
+                }}
+              >
+                PRIVATE EQUITY
+              </Button>
+              <Button
+                sx={{
+                  backgroundColor: "#FFF",
+                  color: "#000",
+                  fontFamily: "Rapid ST Trial",
+                  fontSize: "17px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "100%",
+                  letterSpacing: 0.56,
+                  textTransform: "uppercase",
+                  padding: "15px 20px",
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  borderRadius: "4px",
+                  marginRight: "20px",
+                  height: "50px",
+                  ":hover": {
+                    bgcolor: "#AF5",
+                    color: "white",
+                  },
+                }}
+              >
+                ASSET MANAGERS
+              </Button>
+              <Button
+                sx={{
+                  backgroundColor: "#FFF",
+                  color: "#000",
+                  fontFamily: "Rapid ST Trial",
+                  fontSize: "17px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "100%",
+                  letterSpacing: 0.56,
+                  textTransform: "uppercase",
+                  padding: "15px 20px",
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  borderRadius: "4px",
+                  marginRight: "20px",
+                  height: "50px",
+                  ":hover": {
+                    bgcolor: "#AF5",
+                    color: "white",
+                  },
+                }}
+              >
+                FAMILY OFFICE
+              </Button>
+            </div>
+          </Container>
         </div>
       </Box>
     </div>
