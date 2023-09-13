@@ -62,29 +62,6 @@ const Header = (props) => {
         <LogoName className={classes.LogoName} />
       </div>
       <MenuIcon className={classes.MenuIcon} onClick={props.handleOpenMemu} />
-      {/* <div className={classes.btnGroup}>
-        <Button
-          className={classes.button}
-          onClick={() => props.handleChangePage("homepage")}
-          sx={{ color: "white" }}
-        >
-          Technology
-        </Button>
-        <Button
-          className={classes.button}
-          onClick={() => props.handleChangePage("caseStudiesPage")}
-          sx={{ color: "white", paddingLeft: "30px" }}
-        >
-          Case Studies
-        </Button>
-        <Button
-          className={classes.button}
-          onClick={props.handleOpen}
-          sx={{ color: "white", paddingLeft: "30px" }}
-        >
-          Consultation
-        </Button>
-      </div> */}
     </div>
   );
 };

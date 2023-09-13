@@ -46,9 +46,7 @@ const handleDynamicHeight = (ref, setDynamicHeight) => {
       const dynamicHeight = calcDynamicHeight(objectWidth);
       setDynamicHeight(dynamicHeight);
     }
-  } catch (e) {
-    // console.log("--------- handle dynamice height ---", e);
-  }
+  } catch (e) {}
 };
 
 const applyScrollListener = (ref, setTranslateX) => {
@@ -59,9 +57,7 @@ const applyScrollListener = (ref, setTranslateX) => {
         setTranslateX(offsetTop);
       }
     });
-  } catch (e) {
-    console.log("-------- apply scroll listener ---", e);
-  }
+  } catch (e) {}
 };
 
 const useStyles = makeStyles({
@@ -243,12 +239,12 @@ const Section6 = () => {
                     <Divider className={classes.cardLine} />
                     <div className={classes.cardTitleBg}>
                       <LeftArrowIcon className={classes.leftArrowIcon} />
-                      <div className={classes.cardTitle}>Automation</div>
+                      <div className={classes.cardTitle}>Valuation</div>
                       <RightArrowIcon className={classes.rightArrowIcon} />
                     </div>
 
                     <div className={classes.cardDescription}>
-                      Mint tokens in compliance with KYC requirements.
+                      Verify asset valuations with best-in-class oracles.
                     </div>
                   </SampleCard>
                   <SampleCard>
@@ -256,12 +252,12 @@ const Section6 = () => {
                     <Divider className={classes.cardLine} />
                     <div className={classes.cardTitleBg}>
                       <LeftArrowIcon className={classes.leftArrowIcon} />
-                      <div className={classes.cardTitle}>Automation</div>
+                      <div className={classes.cardTitle}>Markets</div>
                       <RightArrowIcon className={classes.rightArrowIcon} />
                     </div>
 
                     <div className={classes.cardDescription}>
-                      Mint tokens in compliance with KYC requirements.
+                      Support for initial and secondary offerings.
                     </div>
                   </SampleCard>
                 </CardsContainer>

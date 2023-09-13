@@ -76,19 +76,3 @@ const Section6 = () => {
 };
 
 export default Section6;
-
-// import React from 'react';
-// import HorizontalSwiper from '../../components/HorizontalSwiper';
-// import AppContent from '../../components/AppContent';
-
-// function Section6() {
-//   return (
-//     <div>
-//       <HorizontalSwiper>
-//         <AppContent />
-//       </HorizontalSwiper>
-//     </div>
-//   );
-// }
-
-// export default Section6;
