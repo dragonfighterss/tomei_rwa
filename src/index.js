@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './assets/fonts/Rand-Light/fonts.css';
 // import './assets/fonts/Rand-Light/fonts.css';
+// import './assets/fonts/Rand-Medium/fonts.css';
+// import './assets/fonts/Rand-Thin/fonts.css';
+// import './assets/fonts/TTF/RapidST_Regular.ttf'; 
+import './assets/fonts/WOFF/RapidST_Regular.woff'; 
+// import './assets/fonts/TTF/RapidST_Regular.woff2'; 
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
