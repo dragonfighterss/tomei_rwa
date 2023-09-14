@@ -8,7 +8,7 @@ const theme = createTheme();
 
 function App() {
   const isMobile = MediaQuery();
-  const [page, setPage] = useState("caseStudiesPage");
+  const [page, setPage] = useState("homepage");
   const [open, setOpen] = React.useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 

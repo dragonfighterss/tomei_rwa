@@ -5,16 +5,14 @@ import Rectangle_1408 from "../../../assets/images/Rectangle_1408.png";
 import { ReactComponent as TomeiTokenSymbol } from "../../../assets/images/Tomei-TokenSymbol.svg";
 import { ReactComponent as GoldToken } from "../../../assets/images/Gold_Token.svg";
 import { ReactComponent as RealEstateToken } from "../../../assets/images/Real_Estate_Token.svg";
+import { ReactComponent as MusicToken } from "../../../assets/images/Music_Token.svg";
 import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 2520,
     backgroundColor: "#0A0A0A",
-    display: "inline-flex",
-    alignItems: "flex-start",
   },
   left_top: {
     height: 375,
@@ -38,7 +36,7 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
   },
   left_middle: {
-    height: 1080,
+    height: 700,
     background: "#1F1F1F",
   },
   left_middle_title: {
@@ -49,29 +47,28 @@ const useStyles = makeStyles({
     fontWeight: 300,
     lineHeight: "120%",
     letterSpacing: 0.38,
-    paddingTop: 250,
-    paddingLeft: 160,
+    paddingTop: 70,
+    paddingLeft: 31,
   },
   left_middle_content: {
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
     fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "34px",
-    letterSpacing: 0.22,
-    width: 476,
-    height: 204,
-    paddingTop: 129,
-    paddingLeft: 163,
+    fontWeight: 300,
+    lineHeight: "150%",
+    letterSpacing: 0.44,
+    width: 311.74,
+    paddingTop: 40,
+    paddingLeft: 33,
   },
   right_middle_bottom: {
     height: 180,
     backgroundColor: "#0A0A0A",
   },
   left_bottom_logoBg: {
-    width: 541,
-    height: 541,
+    width: 281.771,
+    height: 281.771,
     flexShrink: 0,
     background: "#3E54FF",
     mixBlendMode: "exclusion",
@@ -79,8 +76,8 @@ const useStyles = makeStyles({
   left_bottom_logo: {
     color: "#FFF",
     position: "absolute",
-    marginTop: -450,
-    marginLeft: 80,
+    marginTop: -251,
+    marginLeft:  23,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -88,7 +85,8 @@ const useStyles = makeStyles({
     paddingLeft: 12,
   },
   right_top: {
-    height: 900,
+    height: 700,
+    backgroundColor: "#141414",
   },
   right_top_title: {
     color: "#fff",
@@ -99,39 +97,36 @@ const useStyles = makeStyles({
     lineHeight: "120%",
     letterSpacing: 0.38,
     paddingTop: 70,
-    paddingLeft: 80,
+    paddingLeft: 33,
   },
   right_top_content: {
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
     fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "34px",
-    letterSpacing: 0.22,
-    width: 410,
-    height: 264,
-    paddingTop: 100,
-    paddingLeft: 83,
+    fontWeight: 300,
+    lineHeight: "150%",
+    letterSpacing: 0.44,
+    width: 311,
+    paddingTop: 40,
+    paddingLeft: 33,
   },
   right_middle: {
-    height: 900,
+    height: 375,
   },
   right_middle_logoBg: {
-    width: 361,
-    height: 360,
+    width: 188.021,
+    height: 187.5,
     flexShrink: 0,
     position: "absolute",
     right: 0,
-    marginTop: 360,
+    marginTop: 186,
     background: "#3E54FF",
     mixBlendMode: "exclusion",
   },
   right_middle_logo: {
     color: "#FFF",
     position: "absolute",
-    marginTop: 80,
-    marginLeft: 80,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -139,7 +134,7 @@ const useStyles = makeStyles({
     paddingRight: 14,
   },
   right_bottom: {
-    height: 720,
+    height: 700,
     backgroundColor: "#0A0A0A",
   },
   right_bottom_title: {
@@ -150,21 +145,20 @@ const useStyles = makeStyles({
     fontWeight: 300,
     lineHeight: "120%",
     letterSpacing: 0.38,
-    paddingTop: 75,
-    paddingLeft: 83,
+    paddingTop: 70,
+    paddingLeft: 33,
   },
   right_bottom_content: {
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
     fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "34px",
-    letterSpacing: 0.22,
-    width: 410,
-    height: 374,
-    paddingTop: 75,
-    paddingLeft: 83,
+    fontWeight: 300,
+    lineHeight: "150%",
+    letterSpacing: 0.44,
+    width: 311,
+    paddingTop: 40,
+    paddingLeft: 33,
   },
 });
 const Section1 = () => {
@@ -176,7 +170,7 @@ const Section1 = () => {
         <Box
           component="div"
           sx={{
-            width: "526.563px",
+            width: "100%",
             height: "375px",
             backgroundImage: `url(${Rectangle_1406})`,
             backgroundPosition: "center",
@@ -189,37 +183,6 @@ const Section1 = () => {
             <TomeiTokenSymbol className={classes.left_top_icon} />
             <GoldToken
               className={classes.left_top_icon}
-              style={{ paddingTop: "9px" }}
-            />
-          </div>
-        </Box>
-      </div>
-      <div className={classes.left_middle}>
-        <div className={classes.left_middle_title}>Music and Video</div>
-        <div className={classes.left_middle_content}>
-          Creative works such as music and videos generate rights and royalties
-          for their creators. These rights can be tokenized, allowing creators
-          to raise funds by selling a portion of their future earnings while
-          retaining control over their work.
-        </div>
-      </div>
-      <div className={classes.left_bottom}>
-        <Box
-          component="div"
-          sx={{
-            width: "100%",
-            height: "720px",
-            backgroundImage: `url(${Rectangle_1408})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className={classes.left_bottom_logoBg}></div>
-          <div className={classes.left_bottom_logo}>
-            <TomeiTokenSymbol className={classes.left_bottom_icon} />
-            <RealEstateToken
-              className={classes.left_bottom_icon}
               style={{ paddingTop: "9px" }}
             />
           </div>
@@ -240,7 +203,7 @@ const Section1 = () => {
           component="div"
           sx={{
             width: "100%",
-            height: "720px",
+            height: "375px",
             backgroundImage: `url(${Rectangle_1407})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -249,14 +212,45 @@ const Section1 = () => {
         >
           <div className={classes.right_middle_logo}>
             <TomeiTokenSymbol className={classes.right_middle_icon} />
-            <RealEstateToken
+            <MusicToken
               className={classes.right_middle_icon}
               style={{ paddingTop: "9px" }}
             />
           </div>
-          {/* <div className={classes.right_middle_logoBg}></div> */}
+          <div className={classes.right_middle_logoBg}></div>
         </Box>
         <div className={classes.right_middle_bottom}></div>
+      </div>
+      <div className={classes.left_middle}>
+        <div className={classes.left_middle_title}>Music and Video</div>
+        <div className={classes.left_middle_content}>
+          Creative works such as music and videos generate rights and royalties
+          for their creators. These rights can be tokenized, allowing creators
+          to raise funds by selling a portion of their future earnings while
+          retaining control over their work.
+        </div>
+      </div>
+      <div className={classes.left_bottom}>
+        <Box
+          component="div"
+          sx={{
+            width: "100%",
+            height: "375px",
+            backgroundImage: `url(${Rectangle_1408})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className={classes.left_bottom_logoBg}></div>
+          <div className={classes.left_bottom_logo}>
+            <TomeiTokenSymbol className={classes.left_bottom_icon} />
+            <RealEstateToken
+              className={classes.left_bottom_icon}
+              style={{ paddingTop: "9px" }}
+            />
+          </div>
+        </Box>
       </div>
       <div className={classes.right_bottom}>
         <div className={classes.right_bottom_title}>Real Estate</div>

@@ -10,13 +10,14 @@ const MobileView = (props) => {
   return (
     <div className="MobileView" style={{ overflowX: "hidden" }}>
       <Header handleOpenMemu={props.handleOpenMemu} />
-      {props.menuOpen && (
+      {props.menuOpen && !props.open && (
         <MenuPage
           handleChangePage={props.handleChangePage}
           handleOpenModal={props.handleOpenModal}
         />
       )}
-      {props.page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
+      {!props.open && props.page === "homepage" && <Homepage />}
+      {!props.open && props.page === "caseStudiesPage" && <CaseStudiesPage />}
       <ConsultationModal open={props.open} handleClose={props.handleClose} />
       {!props.menuOpen && <Footer />}
     </div>

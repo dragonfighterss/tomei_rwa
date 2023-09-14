@@ -5,6 +5,7 @@ import Rectangle_1408 from "../../../assets/images/Rectangle_1408.png";
 import { ReactComponent as TomeiTokenSymbol } from "../../../assets/images/Tomei-TokenSymbol.svg";
 import { ReactComponent as GoldToken } from "../../../assets/images/Gold_Token.svg";
 import { ReactComponent as RealEstateToken } from "../../../assets/images/Real_Estate_Token.svg";
+import { ReactComponent as MusicToken } from "../../../assets/images/Music_Token.svg";
 import { Box, Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
@@ -221,8 +222,6 @@ const useStyles = makeStyles((theme) => ({
       height: 360,
       marginTop: 360,
     },
-    width: 361,
-    height: 360,
     flexShrink: 0,
     position: "absolute",
     right: 0,
@@ -232,8 +231,8 @@ const useStyles = makeStyles((theme) => ({
   right_middle_logo: {
     color: "#FFF",
     position: "absolute",
-    marginTop: 80,
-    marginLeft: 80,
+    marginTop: 30,
+    marginLeft: 33,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -381,7 +380,7 @@ const Section1 = () => {
           >
             <div className={classes.right_middle_logo}>
               <TomeiTokenSymbol className={classes.right_middle_icon} />
-              <RealEstateToken
+              <MusicToken
                 className={classes.right_middle_icon}
                 style={{ paddingTop: "9px" }}
               />

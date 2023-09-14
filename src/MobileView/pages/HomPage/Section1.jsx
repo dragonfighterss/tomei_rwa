@@ -7,6 +7,7 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     height: 1120,
+    marginTop: -60
   },
   slogon: {
     color: "#fff",

@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     color: "#FFF",
     backgroundColor: "#0A0A0A",
     position: "absolute",
-    top: 338,
+    top: "36.4%",
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "100%",
