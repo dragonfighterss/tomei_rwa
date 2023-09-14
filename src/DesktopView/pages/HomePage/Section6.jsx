@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@mui/styles";
-import { Divider } from "@mui/material";
+import { Divider, Container } from "@mui/material";
 import { ReactComponent as FirstNumIcon } from "../../../assets/images/Group_11053.svg";
 import { ReactComponent as SecondNumIcon } from "../../../assets/images/Group_11054.svg";
 import { ReactComponent as ThirdNumIcon } from "../../../assets/images/Group_11055.svg";
@@ -64,10 +64,15 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     backgroundColor: "#000",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    // textAlign: "center",
   },
   block: {
     paddingTop: "5%",
-    paddingLeft: "10.9%",
+    paddingLeft: 10,
+    maxWidth: 1200,
   },
   title: {
     color: "#fff",
@@ -187,7 +192,7 @@ const useStyles = makeStyles({
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
     alignItems: "center",
-    paddingRight:"300px"
+    // paddingRight:"300px"
   },
 });
 
@@ -213,9 +218,9 @@ const Section6 = () => {
     let cardWidth = window.innerWidth * 0.1;
     if (0 < -translateX && -translateX < cardWidth) {
       setCurrentCard(1);
-    } else if (cardWidth < -translateX && -translateX < cardWidth * 2) {
+    } else if (cardWidth < -translateX && -translateX < cardWidth * 1.8) {
       setCurrentCard(2);
-    } else if (cardWidth * 2 < -translateX && -translateX < cardWidth * 2.5) {
+    } else if (cardWidth * 1.8 < -translateX && -translateX < cardWidth * 2.5) {
       setCurrentCard(3);
     } else if (cardWidth * 2.5 < -translateX && -translateX < cardWidth * 3) {
       setCurrentCard(4);
@@ -226,7 +231,6 @@ const Section6 = () => {
     <div className={classes.root}>
       <TallOuterContainer dynamicHeight={dynamicHeight}>
         <StickyInnerContainer ref={containerRef}>
-          
           <div className={classes.block}>
             <div className={classes.title}>Technology</div>
             <div className={classes.subTitle}>The Power of Programmable ZK</div>

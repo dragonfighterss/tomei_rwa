@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       leadingTrim: "both",
       textEdge: "cap",
       fontFamily: "Rand",
-      fontSize: 149,
+      fontSize: 160,
       fontStyle: "normal",
       fontWeight: 250,
       lineHeight: "160px",
@@ -61,7 +61,6 @@ const useStyles = makeStyles((theme) => ({
       textTransform: "capitalize",
       height: 300,
       marginLeft: 12,
-      width: 1500,
     },
   },
   btnGroup: {
@@ -72,29 +71,33 @@ const useStyles = makeStyles((theme) => ({
     background: "#0A0A0A",
     paddingTop: 71,
   },
-  sloginBg: {
+  slogonBg: {
     [theme.breakpoints.up("sm")]: {
       height: 630,
       marginTop: -639,
       position: "absolute",
       marginLeft: -15,
+      width: 600,
     },
     [theme.breakpoints.up("md")]: {
       height: 630,
       marginTop: -639,
       position: "absolute",
       marginLeft: -15,
+      width: 900,
     },
     [theme.breakpoints.up("lg")]: {
       height: 630,
       marginTop: -639,
       position: "absolute",
       marginLeft: -15,
+      width: 1200,
     },
     [theme.breakpoints.up("xl")]: {
       height: 630,
       marginTop: -639,
       position: "absolute",
+      width: 1300,
     },
   },
   letter: {
@@ -122,7 +125,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
   },
   imgBg: {
-    height: 760,
+    height: 689,
     background: "#010552",
     mixBlendMode: "exclusion",
   },
@@ -145,7 +148,7 @@ const Section1 = () => {
       >
         <div className={classes.imgBg}></div>
         <Container maxWidth="lg">
-          <div className={classes.sloginBg}>
+          <div className={classes.slogonBg}>
             <span className={classes.slogon}>
               The World`s Most Valuable RWA Tokens
             </span>
@@ -160,7 +163,7 @@ const Section1 = () => {
             <div
               style={{
                 display: "flex",
-                paddingTop: "48px",
+                paddingTop: "46px",
                 paddingBottom: "72px",
               }}
             >
@@ -182,7 +185,7 @@ const Section1 = () => {
                   marginRight: "20px",
                   height: "50px",
                   ":hover": {
-                    bgcolor: "#AF5",
+                    bgcolor: "#808080",
                     color: "white",
                   },
                 }}
@@ -207,7 +210,7 @@ const Section1 = () => {
                   marginRight: "20px",
                   height: "50px",
                   ":hover": {
-                    bgcolor: "#AF5",
+                    bgcolor: "#808080",
                     color: "white",
                   },
                 }}
@@ -232,7 +235,7 @@ const Section1 = () => {
                   marginRight: "20px",
                   height: "50px",
                   ":hover": {
-                    bgcolor: "#AF5",
+                    bgcolor: "#808080",
                     color: "white",
                   },
                 }}
@@ -257,7 +260,7 @@ const Section1 = () => {
                   marginRight: "20px",
                   height: "50px",
                   ":hover": {
-                    bgcolor: "#AF5",
+                    bgcolor: "#808080",
                     color: "white",
                   },
                 }}

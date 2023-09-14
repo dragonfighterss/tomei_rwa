@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Container } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
 import Img from "../../../assets/images/image_72.png";
 import { makeStyles } from "@mui/styles";
 
@@ -11,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: -4
   },
   box: {
     [theme.breakpoints.up("sm")]: {
@@ -128,7 +128,6 @@ const Section4 = () => {
     <div className={classes.root}>
       <Box className={classes.box}>
         <Container maxWidth="lg">
-          {/* <div> */}
           <div className={classes.boxLeft}>
             <div className={classes.description}>
               Tomei RWA provides the gold standard in RWA tokenization with
@@ -158,7 +157,6 @@ const Section4 = () => {
               }}
             />
           </div>
-          {/* </div> */}
         </Container>
       </Box>
     </div>

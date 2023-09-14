@@ -7,14 +7,18 @@ const useStyles = makeStyles({
     background: "#000000",
     color: "white",
     height: 120,
+    justifyContent: "center",
+    textAlign: "center",
   },
   span1: {
+    position: "absolute",
     fontFamily: "Rand",
     fontSize: 17.5,
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "150%",
     letterSpacing: 0.35,
+    left: 0,
     marginTop: 54,
     marginLeft: 60,
   },
@@ -25,14 +29,11 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "100%",
     letterSpacing: 0.22,
-    marginLeft: 30,
-    marginTop: 64,
+    marginTop: 69,
   },
   rightSpan: {
     display: "flex",
-    position: "absolute",
-    right: 0,
-    marginRight: 505,
+    textAlign: "center",
   },
 });
 const Footer = () => {
@@ -40,11 +41,10 @@ const Footer = () => {
   return (
     <div className={classes.footer}>
       <span className={classes.span1}>A Jiritsu Product</span>
-      <div className={classes.rightSpan}>
-        <span className={classes.span2}>All Rights Reserved. Tomei RWA 2023</span>
-        {/* <span className={classes.span2}>
-          Legal copy as needed. lorem upsum dolore set amut.
-        </span> */}
+      <div className={classes.rightSpan} sx={{ textAlign: "center", m: 1 }}>
+        <span className={classes.span2}>
+          All Rights Reserved. Tomei RWA 2023
+        </span>
       </div>
     </div>
   );

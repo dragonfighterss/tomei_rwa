@@ -4,7 +4,7 @@ import { ReactComponent as LogoName } from "../../assets/images/Group_10830.svg"
 import { ReactComponent as LogoSymbol } from "../../assets/images/T-Symbol1.svg";
 import { Button, Container } from "@mui/material";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     display: "flex",
     background: "#000000",
@@ -27,11 +27,34 @@ const useStyles = makeStyles({
     textTransform: "capitalize",
   },
   btnGroup: {
-    display: "flex",
-    position: "absolute",
-    right: 0,
-    marginTop: 37,
-    marginRight: 160,
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      position: "absolute",
+      right: 0,
+      marginTop: 37,
+      marginRight: "7.5%",
+    },
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      position: "absolute",
+      right: 0,
+      marginTop: 37,
+      marginRight: "7.5%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      display: "flex",
+      position: "absolute",
+      right: 0,
+      marginTop: 37,
+      marginRight: "11.5%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      display: "flex",
+      position: "absolute",
+      right: 0,
+      marginTop: 37,
+      marginRight: "18.5%",
+    },
   },
   LogoSymbol: {
     width: 42,
@@ -44,7 +67,7 @@ const useStyles = makeStyles({
     height: 15,
     paddingLeft: 20,
   },
-});
+}));
 
 const Header = (props) => {
   const classes = useStyles();
@@ -61,21 +84,21 @@ const Header = (props) => {
           <Button
             className={classes.button}
             onClick={() => props.handleChangePage("homepage")}
-            sx={{ color: "white" }}
+            sx={{ color: "white", paddingRight: "30px" }}
           >
             Technology
           </Button>
           <Button
             className={classes.button}
             onClick={() => props.handleChangePage("caseStudiesPage")}
-            sx={{ color: "white", paddingLeft: "30px" }}
+            sx={{ color: "white", paddingRight: "30px" }}
           >
             Case Studies
           </Button>
           <Button
             className={classes.button}
             onClick={props.handleOpen}
-            sx={{ color: "white", paddingLeft: "30px" }}
+            sx={{ color: "white" }}
           >
             Consultation
           </Button>
