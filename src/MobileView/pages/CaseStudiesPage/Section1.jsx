@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { Container } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 500,
+    height: 375,
     backgroundColor: "#0A0A0A",
   },
   title: {
@@ -12,15 +13,15 @@ const useStyles = makeStyles({
     leadingTrim: "both",
     textEdge: "cap",
     fontFamily: "Rand",
-    fontSize: 80,
+    fontSize: 50,
     fontStyle: "normal",
     fontWeight: 250,
-    lineHeight: "120%",
+    lineHeight: "56.667px",
     letterSpacing: -1.6,
     textTransform: "capitalize",
     width: 230,
-    paddingLeft: 160,
-    paddingTop: 160,
+    paddingTop: 110,
+    paddingLeft:15
   },
 });
 const Section1 = () => {
@@ -28,7 +29,9 @@ const Section1 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.title}>Case Studies</div>
+      <Container maxWidth="lg">
+        <div className={classes.title}>Case Studies</div>
+      </Container>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { ReactComponent as MenuIcon } from "../../assets/images/Group_11098.svg"
 
 const useStyles = makeStyles({
   header: {
-    // display: "flex",
+    width:"100%",
     background: "#000000",
     color: "#FFF",
     height: 60,
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     width: 156.563,
     height: 20,
     paddingTop: 20,
-    paddingLeft: 20,
+    paddingLeft: 32,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

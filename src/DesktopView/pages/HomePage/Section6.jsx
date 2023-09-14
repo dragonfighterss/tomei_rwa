@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       width: 3000,
       paddingTop: "5%",
-      paddingLeft: "15.4%",
+      paddingLeft: "20%",
     },
   },
   title: {
@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
   },
   line: {
     background: "#FFF",
-    width: "93%",
+    width: "37.8%",
     height: 1,
   },
   content: {

@@ -64,7 +64,7 @@ const MenuPage = (props) => {
         </Button>
         <Button
           className={classes.button}
-          onClick={props.handleOpen}
+          onClick={props.handleOpenModal}
           sx={{
             color: "#FFF",
             fontFamily: "Rapid ST Trial",

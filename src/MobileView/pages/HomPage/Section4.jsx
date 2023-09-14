@@ -1,24 +1,18 @@
 import React from "react";
-import { Box } from "@mui/material";
-import Img from "../../../assets/images/image_72.png";
+import { Box, Container } from "@mui/material";
+import Img from "../../../assets/images/image_72_1.png";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 800,
+    height: 1070,
     backgroundColor: "#000",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
   },
   box: {
-    height: 500,
+    // height: 500,
     flexShrink: 0,
-    borderRadius: 30,
     backgroundColor: "#FFE1D7",
-    display: "inline-flex",
-    alignItems: "flex-start",
   },
   description: {
     color: "#000",
@@ -28,9 +22,9 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "150%",
     letterSpacing: 0.35,
-    width: 480,
-    paddingTop: 79,
-    paddingLeft: 100,
+    width: 300,
+    paddingTop: 80,
+    paddingLeft: 37,
   },
   btn: {
     color: "#000",
@@ -44,13 +38,18 @@ const useStyles = makeStyles({
     cusor: "pointer",
   },
   btnBg: {
-    paddingLeft: 100,
-    paddingTop: 68,
+    paddingLeft: 37,
+    paddingTop: 60,
+    paddingBottom: 81,
   },
   boxRight: {
-    width: 665,
-    height: 500,
+    width: 375,
+    height: 530,
     flexShrink: 0,
+    backgroundColor: "#FFE1D7",
+  },
+  boxLeft: {
+    height: 540,
   },
 });
 const Section4 = () => {
@@ -58,9 +57,12 @@ const Section4 = () => {
 
   return (
     <div className={classes.root}>
-      <div>
-        <div className={classes.box}>
-          <div className={classes.boxLeft}>
+      <div className={classes.box}>
+        <div
+          className={classes.boxLeft}
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <div>
             <div className={classes.description}>
               Tomei RWA provides the gold standard in RWA tokenization with
               proprietary ZK attestation system and transparent automation.
@@ -75,19 +77,24 @@ const Section4 = () => {
               </a>
             </div>
           </div>
-          <div className={classes.boxRight}>
+        </div>
+        <div className={classes.boxRight}>
+          <Container maxWidth="lg">
             <Box
               component="div"
               sx={{
-                width: "665px",
+                width: "294px",
                 height: "500px",
                 backgroundImage: `url(${Img})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
+                backgroundColor: "#093540",
+                marginLeft: "21px",
+                borderRadius: "20px",
               }}
             />
-          </div>
+          </Container>
         </div>
       </div>
     </div>

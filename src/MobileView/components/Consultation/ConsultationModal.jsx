@@ -7,18 +7,18 @@ const useStyles = makeStyles({
     color: "#FFF",
     backgroundColor: "#0A0A0A",
     position: "absolute",
-    top: "50%",
+    top: 338,
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "100%",
-    height: 600,
+    height: 900,
     border: "2px solid #000",
     p: 4,
     marginTop: 176,
   },
   modalHeader: {
-    marginTop: 38,
-    marginLeft: 43,
+    marginTop: 119,
+    marginLeft: 73,
   },
   marginHeaderSpan: {
     fontFamily: "Rand",
@@ -37,8 +37,8 @@ const useStyles = makeStyles({
   btnGroup: {
     justifyContent: "center",
     position: "absolute",
-    top: 214,
-    left: 40,
+    marginTop: "110px !important",
+    left: 31,
   },
 });
 const ConsultationModal = (props) => {
@@ -78,8 +78,8 @@ const ConsultationModal = (props) => {
               fontWeight: 300,
               lineHeight: "150%",
               letterSpacing: 0.44,
-              borderRadius: 20,
-              padding:"20px 50px 20px 50px",
+              borderRadius: 5,
+              padding: "20px 50px 20px 50px",
               border: "1px solid #D9D9D9",
               width: "314px",
             }}
@@ -97,11 +97,12 @@ const ConsultationModal = (props) => {
               fontWeight: 300,
               lineHeight: "150%",
               letterSpacing: 0.44,
-              borderRadius: 20,
-              padding:"20px 25px 20px 25px",
+              borderRadius: 5,
+              padding: "20px 25px 20px 25px",
               border: "1px solid #D9D9D9",
               marginTop: "20px",
               width: "314px",
+              marginBottom: "60px",
             }}
           >
             info@tomei.network

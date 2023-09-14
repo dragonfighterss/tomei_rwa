@@ -10,15 +10,21 @@ function App() {
   const isMobile = MediaQuery();
   const [page, setPage] = useState("caseStudiesPage");
   const [open, setOpen] = React.useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleOpen = () => {
+  const handleOpenModal = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
 
+  const handleOpenMemu = () => {
+    setMenuOpen((preState) => !preState);
+  };
+
   const handleChangePage = (nextPage) => {
+    setMenuOpen(false);
     setPage(nextPage);
   };
   return (
@@ -27,7 +33,9 @@ function App() {
         <MobileView
           handleChangePage={handleChangePage}
           handleClose={handleClose}
-          handleOpen={handleOpen}
+          handleOpenModal={handleOpenModal}
+          handleOpenMemu={handleOpenMemu}
+          menuOpen={menuOpen}
           page={page}
           open={open}
         />
@@ -35,7 +43,7 @@ function App() {
         <DesktopView
           handleChangePage={handleChangePage}
           handleClose={handleClose}
-          handleOpen={handleOpen}
+          handleOpenModal={handleOpenModal}
           page={page}
           open={open}
         />

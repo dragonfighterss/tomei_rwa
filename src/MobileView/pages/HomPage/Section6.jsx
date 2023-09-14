@@ -5,12 +5,12 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    height: 1150,
+    height: 1075,
     backgroundColor: "#000",
   },
   block: {
-    paddingTop: "5%",
-    paddingLeft: "5%",
+    paddingTop: 80,
+    paddingLeft: 37,
   },
   title: {
     color: "#fff",
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     fontWeight: 300,
     lineHeight: "120%%",
     letterSpacing: 0.38,
-    width: 330,
+    width: 315,
     paddingTop: 49,
   },
   subDescription: {
@@ -63,9 +63,7 @@ const Section6 = () => {
       <div className={classes.block}>
         <div className={classes.title}>Technology</div>
         <div className={classes.subTitle}>The Power of Programmable ZK</div>
-        <div classes={classes.content}>
-       
-        </div>
+        <div classes={classes.content}></div>
         <Divider className={classes.line} />
         <div className={classes.subDescription}>
           POWERED BY JIRITSU ZK Nodes

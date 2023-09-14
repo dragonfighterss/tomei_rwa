@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import { Button } from "@mui/material";
+import { Button, Container } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
@@ -9,8 +9,8 @@ const useStyles = makeStyles({
     backgroundColor: "#0A0A0A",
   },
   top: {
-    paddingTop: 160,
-    paddingLeft: 164,
+    paddingTop: 110,
+    paddingLeft: 34,
   },
   content: {
     color: "#fff",
@@ -24,9 +24,7 @@ const useStyles = makeStyles({
   },
   bottom: {
     paddingTop: 60,
-    paddingLeft: 160,
-    display: "inline-flex",
-    alignItems: "flex-start",
+    paddingLeft: 33,
   },
 });
 const Section3 = () => {
@@ -51,12 +49,13 @@ const Section3 = () => {
             fontWeight: 300,
             lineHeight: "150%",
             letterSpacing: 0.44,
-            borderRadius: 20,
+            borderRadius: 5,
             paddingLeft: "50px",
             paddingRight: "50px",
             paddingTop: "20px",
             paddingBottom: "20px",
             border: "1px solid #FFF",
+            width: 315,
           }}
         >
           For Institutions
@@ -72,13 +71,14 @@ const Section3 = () => {
             fontWeight: 300,
             lineHeight: "150%",
             letterSpacing: 0.44,
-            borderRadius: 20,
+            borderRadius: 5,
             paddingLeft: "50px",
             paddingRight: "50px",
             paddingTop: "20px",
             paddingBottom: "20px",
             border: "1px solid #FFF",
-            marginLeft: "20px",
+            marginTop: "20px",
+            width: 315,
           }}
         >
           For Individuals

@@ -10,7 +10,7 @@ const DesktopView = (props) => {
     <div className="DesktopView">
       <Header
         handleChangePage={props.handleChangePage}
-        handleOpen={props.handleOpen}
+        handleOpenModal={props.handleOpenModal}
       />
       {props.page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
       <ConsultationModal open={props.open} handleClose={props.handleClose} />

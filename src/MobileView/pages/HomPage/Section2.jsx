@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     display: "flex",
   },
   top: {
-    paddingTop: 90,
+    paddingTop: 80,
   },
   totalBlock: {
     paddingLeft: "10%",
@@ -38,7 +38,7 @@ const useStyles = makeStyles({
   },
   bottom: {
     height: 279,
-    width: 315,
+    width: 296,
     paddingTop: 80,
   },
   line: {
@@ -50,11 +50,11 @@ const useStyles = makeStyles({
     paddingBottom: 50,
   },
   contentGroup: {
-    paddingTop: 80,
+    paddingTop: 50,
   },
   content1: {
     color: "#FAFAFA",
-    fontSize: 22,
+    fontSize: "22px !important",
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: "150%",
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
   },
   content2: {
     color: "#FBA850",
-    fontSize: 22,
+    fontSize: "22px !important",
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: "150%",
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
   },
   block: {
     width: 315,
-    height: 279,
+    height: 263,
     marginRight: 115,
     paddingBottom: 80,
   },
@@ -115,10 +115,15 @@ const Section2 = () => {
             <Icon2 className={classes.icon} />
             <Divider className={classes.line} />
             <div className={classes.contentGroup}>
-              <Typography className={classes.content1}>Advanced</Typography>
-              <Typography className={classes.content2}>
-                Programmability,
-              </Typography>
+              <div style={{ display: "inline-flex" }}>
+                <Typography className={classes.content1}>Advanced</Typography>
+                <Typography
+                  className={classes.content2}
+                  style={{ paddingLeft: "7px" }}
+                >
+                  Programmability,
+                </Typography>
+              </div>
               <Typography className={classes.content1}>
                 Seamless Compliance
               </Typography>
@@ -129,8 +134,17 @@ const Section2 = () => {
             <Icon3 className={classes.icon} />
             <Divider className={classes.line} />
             <div className={classes.contentGroup}>
-              <Typography className={classes.content1}>Unparalleled</Typography>
-              <Typography className={classes.content2}>Attestation,</Typography>
+              <div style={{ display: "inline-flex" }}>
+                <Typography className={classes.content1}>
+                  Unparalleled
+                </Typography>
+                <Typography
+                  className={classes.content2}
+                  style={{ paddingLeft: "7px" }}
+                >
+                  Attestation,
+                </Typography>
+              </div>
               <Typography className={classes.content1}>
                 Unmatched Confidence
               </Typography>

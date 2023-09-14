@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/Consultation/ConsultationModal";
@@ -7,27 +7,18 @@ import CaseStudiesPage from "./pages/CaseStudiesPage";
 import MenuPage from "./pages/MenuPage";
 
 const MobileView = (props) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleOpenMemu = () => {
-    setMenuOpen((preState) => !preState);
-  };
-
   return (
     <div className="MobileView" style={{ overflowX: "hidden" }}>
-      <Header handleOpenMemu={handleOpenMemu} />
-      {menuOpen ? (
+      <Header handleOpenMemu={props.handleOpenMemu} />
+      {props.menuOpen && (
         <MenuPage
           handleChangePage={props.handleChangePage}
-          handleOpen={props.handleOpen}
+          handleOpenModal={props.handleOpenModal}
         />
-      ) : props.page === "homepage" ? (
-        <Homepage />
-      ) : (
-        <CaseStudiesPage />
       )}
+      {props.page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
       <ConsultationModal open={props.open} handleClose={props.handleClose} />
-      {!menuOpen && <Footer />}
+      {!props.menuOpen && <Footer />}
     </div>
   );
 };

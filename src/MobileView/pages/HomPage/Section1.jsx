@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     leadingTrim: "both",
     textEdge: "cap",
     fontFamily: "Rand",
-    fontSize: 50,
+    fontSize: 48,
     fontStyle: "normal",
     fontWeight: 250,
     lineHeight: "56.667px",
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     height: 150,
   },
   btnGroup: {
-    height: 480,
+    height: 400,
     flexShrink: 0,
     opacity: 0.8,
     background: "#0A0A0A",
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
   sloginBg: {
     height: 150,
     width: 315,
-    marginTop: -474,
+    marginTop: -403,
     paddingLeft: 30,
     position: "absolute",
   },
@@ -61,6 +61,7 @@ const useStyles = makeStyles({
     position: "absolute",
   },
   imgBg: {
+    marginTop: 60,
     height: 640,
     background: "#010552",
     mixBlendMode: "exclusion",
@@ -94,9 +95,7 @@ const Section1 = () => {
           </div>
           <div
             style={{
-              //  display: "flex",
               flexShrink: 0,
-              // flexDirection: "column",
               paddingTop: "48px",
               paddingBottom: "72px",
             }}
@@ -119,6 +118,10 @@ const Section1 = () => {
                 marginRight: "20px",
                 height: "50px",
                 marginBottom: "20px",
+                ":hover": {
+                  bgcolor: "#808080",
+                  color: "white",
+                },
               }}
             >
               Banks and INSURANCE
@@ -141,6 +144,10 @@ const Section1 = () => {
                 marginRight: "20px",
                 height: "50px",
                 marginBottom: "20px",
+                ":hover": {
+                  bgcolor: "#808080",
+                  color: "white",
+                },
               }}
             >
               PRIVATE EQUITY
@@ -163,6 +170,10 @@ const Section1 = () => {
                 marginRight: "20px",
                 height: "50px",
                 marginBottom: "20px",
+                ":hover": {
+                  bgcolor: "#808080",
+                  color: "white",
+                },
               }}
             >
               ASSET MANAGERS
@@ -184,6 +195,10 @@ const Section1 = () => {
                 borderRadius: "4px",
                 marginRight: "20px",
                 height: "50px",
+                ":hover": {
+                  bgcolor: "#808080",
+                  color: "white",
+                },
               }}
             >
               FAMILY OFFICE

@@ -97,7 +97,7 @@ const Header = (props) => {
           </Button>
           <Button
             className={classes.button}
-            onClick={props.handleOpen}
+            onClick={props.handleOpenModal}
             sx={{ color: "white" }}
           >
             Consultation
