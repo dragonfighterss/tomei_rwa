@@ -5,10 +5,10 @@ import ConsultationModal from "./components/Consultation/ConsultationModal";
 import Homepage from "./pages/HomPage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import MenuPage from "./pages/MenuPage";
-
+// style={{ overflowX: "hidden" }}
 const MobileView = (props) => {
   return (
-    <div className="MobileView" style={{ overflowX: "hidden" }}>
+    <div className="MobileView" >
       <Header handleOpenMemu={props.handleOpenMemu} />
       {props.menuOpen && !props.open && (
         <MenuPage

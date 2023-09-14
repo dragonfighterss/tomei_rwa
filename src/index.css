@@ -14,12 +14,12 @@ code {
     monospace;
 }
 
-* {
+/* * {
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 @font-face {
   font-family: "Rapid ST Trial";

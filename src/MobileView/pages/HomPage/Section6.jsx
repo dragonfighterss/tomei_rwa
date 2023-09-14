@@ -54,7 +54,6 @@ const applyScrollListener = (ref, setTranslateX) => {
     window.addEventListener("scroll", () => {
       if (ref?.current) {
         const offsetTop = -ref.current.offsetTop;
-        console.log("------- applu scroll listener ---", offsetTop);
         setTranslateX(offsetTop);
       }
     });
@@ -64,7 +63,7 @@ const applyScrollListener = (ref, setTranslateX) => {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    height: 1075,
+    height: 2075,
     backgroundColor: "#000",
   },
   block: {
@@ -177,7 +176,6 @@ const useStyles = makeStyles((theme) => ({
   },
   leftArrowIcon: {
     paddingTop: 8,
-    position: "absolute",
     marginLeft: 30,
   },
   cardContainer: {
@@ -208,6 +206,7 @@ const Section6 = () => {
     window.addEventListener("resize", resizeHandler);
     applyScrollListener(containerRef, setTranslateX);
   }, []);
+
   useEffect(() => {
     let cardWidth = window.innerWidth * 0.1;
     if (0 < -translateX && -translateX < cardWidth) {
@@ -220,7 +219,7 @@ const Section6 = () => {
       setCurrentCard(4);
     }
   }, [translateX]);
-  console.log("----- current card ---", currentCard);
+
   return (
     <div className={classes.root}>
       <TallOuterContainer dynamicHeight={dynamicHeight}>
