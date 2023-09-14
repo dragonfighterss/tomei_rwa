@@ -5,10 +5,10 @@ import Rectangle_1408 from "../../../assets/images/Rectangle_1408.png";
 import { ReactComponent as TomeiTokenSymbol } from "../../../assets/images/Tomei-TokenSymbol.svg";
 import { ReactComponent as GoldToken } from "../../../assets/images/Gold_Token.svg";
 import { ReactComponent as RealEstateToken } from "../../../assets/images/Real_Estate_Token.svg";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: 2520,
@@ -27,21 +27,49 @@ const useStyles = makeStyles({
   left_top: {
     height: 720,
   },
-  left_top_icon: {
-    paddingLeft: 14,
-  },
   left_top_logoBg: {
-    width: 361,
-    height: 360,
-    flexShrink: 0,
-    background: "#3E54FF",
-    mixBlendMode: "exclusion",
+    [theme.breakpoints.up("sm")]: {
+      width: 265,
+      height: 258,
+      flexShrink: 0,
+      background: "#3E54FF",
+      mixBlendMode: "exclusion",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 361,
+      height: 360,
+      flexShrink: 0,
+      background: "#3E54FF",
+      mixBlendMode: "exclusion",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 361,
+      height: 360,
+      flexShrink: 0,
+      background: "#3E54FF",
+      mixBlendMode: "exclusion",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 361,
+      height: 360,
+      flexShrink: 0,
+      background: "#3E54FF",
+      mixBlendMode: "exclusion",
+    },
   },
   left_top_logo: {
+    [theme.breakpoints.up("sm")]: {
+      color: "#FFF",
+      position: "absolute",
+      marginTop: -234,
+      marginLeft: "4.6%",
+      display: "inline-flex",
+      alignItems: "flex-start",
+    },
     color: "#FFF",
     position: "absolute",
     marginTop: -280,
-    marginLeft: 80,
+    marginLeft: "4.6%",
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -58,9 +86,28 @@ const useStyles = makeStyles({
     lineHeight: "120%",
     letterSpacing: 0.38,
     paddingTop: 250,
-    paddingLeft: 160,
   },
   left_middle_content: {
+    [theme.breakpoints.up("sm")]: {
+      width: 279,
+      height: 204,
+      paddingTop: 129,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 431,
+      height: 204,
+      paddingTop: 129,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 476,
+      height: 204,
+      paddingTop: 129,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 476,
+      height: 204,
+      paddingTop: 129,
+    },
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
@@ -68,27 +115,35 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "34px",
     letterSpacing: 0.22,
-    width: 476,
-    height: 204,
-    paddingTop: 129,
-    paddingLeft: 163,
   },
   right_middle_bottom: {
     height: 180,
     backgroundColor: "#0A0A0A",
   },
   left_bottom_logoBg: {
-    width: 541,
-    height: 541,
+    [theme.breakpoints.up("sm")]: {
+      width: 322,
+      height: 340,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 406,
+      height: 403,
+    },
     flexShrink: 0,
     background: "#3E54FF",
     mixBlendMode: "exclusion",
   },
   left_bottom_logo: {
+    [theme.breakpoints.up("sm")]: {
+      marginTop: -288,
+      marginLeft: "3%",
+    },
+    [theme.breakpoints.up("md")]: {
+      marginTop: -349,
+      marginLeft: "3%",
+    },
     color: "#FFF",
     position: "absolute",
-    marginTop: -450,
-    marginLeft: 80,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -110,6 +165,30 @@ const useStyles = makeStyles({
     paddingLeft: 80,
   },
   right_top_content: {
+    [theme.breakpoints.up("sm")]: {
+      width: 263,
+      height: 264,
+      paddingTop: 100,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 357,
+      height: 264,
+      paddingTop: 100,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 410,
+      height: 264,
+      paddingTop: 100,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 410,
+      height: 264,
+      paddingTop: 100,
+      paddingLeft: 83,
+    },
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
@@ -117,21 +196,36 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "34px",
     letterSpacing: 0.22,
-    width: 410,
-    height: 264,
-    paddingTop: 100,
-    paddingLeft: 83,
   },
   right_middle: {
     height: 900,
   },
   right_middle_logoBg: {
+    [theme.breakpoints.up("sm")]: {
+      width: 254,
+      height: 320,
+      marginTop: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 361,
+      height: 360,
+      marginTop: 360,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 361,
+      height: 360,
+      marginTop: 360,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 361,
+      height: 360,
+      marginTop: 360,
+    },
     width: 361,
     height: 360,
     flexShrink: 0,
     position: "absolute",
     right: 0,
-    marginTop: 360,
     background: "#3E54FF",
     mixBlendMode: "exclusion",
   },
@@ -143,7 +237,7 @@ const useStyles = makeStyles({
     display: "inline-flex",
     alignItems: "flex-start",
   },
-  right_middle_icon:{
+  right_middle_icon: {
     paddingRight: 14,
   },
   right_bottom: {
@@ -162,6 +256,30 @@ const useStyles = makeStyles({
     paddingLeft: 83,
   },
   right_bottom_content: {
+    [theme.breakpoints.up("sm")]: {
+      width: 228,
+      height: 374,
+      paddingTop: 75,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 356,
+      height: 374,
+      paddingTop: 75,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 410,
+      height: 374,
+      paddingTop: 75,
+      paddingLeft: 83,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 410,
+      height: 374,
+      paddingTop: 75,
+      paddingLeft: 83,
+    },
     color: "#fff",
     fontFamily: "Rand",
     fontSize: 22,
@@ -169,12 +287,8 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "34px",
     letterSpacing: 0.22,
-    width: 410,
-    height: 374,
-    paddingTop: 75,
-    paddingLeft: 83,
   },
-});
+}));
 const Section1 = () => {
   const classes = useStyles();
 
@@ -203,15 +317,22 @@ const Section1 = () => {
             </div>
           </Box>
         </div>
+
         <div className={classes.left_middle}>
-          <div className={classes.left_middle_title}>Music and Video</div>
-          <div className={classes.left_middle_content}>
-            Creative works such as music and videos generate rights and
-            royalties for their creators. These rights can be tokenized,
-            allowing creators to raise funds by selling a portion of their
-            future earnings while retaining control over their work.
-          </div>
+          <Container
+            maxWidth="lg"
+            style={{ float: "right", maxWidth: "600px" }}
+          >
+            <div className={classes.left_middle_title}>Music and Video</div>
+            <div className={classes.left_middle_content}>
+              Creative works such as music and videos generate rights and
+              royalties for their creators. These rights can be tokenized,
+              allowing creators to raise funds by selling a portion of their
+              future earnings while retaining control over their work.
+            </div>
+          </Container>
         </div>
+
         <div className={classes.left_bottom}>
           <Box
             component="div"

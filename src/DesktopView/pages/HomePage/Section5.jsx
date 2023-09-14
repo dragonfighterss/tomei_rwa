@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     height: 80,
     display: "inline-flex",
     alignItems: "flex-start",
-    paddingRight: 73.59,
+    paddingRight: 80.59,
   },
 });
 const Section5 = () => {

@@ -1,30 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ConsultationModal from "./components/Consultation/ConsultationModal";
 import Homepage from "./pages/HomePage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 
-const DesktopView = () => {
-    const [page, setPage] = useState("homepage");
-    const [open, setOpen] = React.useState(false);
-  
-    const handleOpen = () => {
-      setOpen(true);
-    };
-    const handleClose = () => {
-      setOpen(false);
-    };
-  
-    const handleChangePage = (nextPage) => {
-      setPage(nextPage);
-    };
+const DesktopView = (props) => {
   return (
     <div className="DesktopView">
-        <Header handleChangePage={handleChangePage} handleOpen={handleOpen} />
-        {page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
-        <ConsultationModal open={open} handleClose={handleClose} />
-        <Footer />
+      <Header
+        handleChangePage={props.handleChangePage}
+        handleOpen={props.handleOpen}
+      />
+      {props.page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
+      <ConsultationModal open={props.open} handleClose={props.handleClose} />
+      <Footer />
     </div>
   );
 };

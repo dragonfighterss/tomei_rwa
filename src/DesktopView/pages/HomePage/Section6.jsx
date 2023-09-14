@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@mui/styles";
-import { Divider, Container } from "@mui/material";
+import { Divider } from "@mui/material";
 import { ReactComponent as FirstNumIcon } from "../../../assets/images/Group_11053.svg";
 import { ReactComponent as SecondNumIcon } from "../../../assets/images/Group_11054.svg";
 import { ReactComponent as ThirdNumIcon } from "../../../assets/images/Group_11055.svg";
@@ -60,19 +60,30 @@ const applyScrollListener = (ref, setTranslateX) => {
   } catch (e) {}
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     backgroundColor: "#000",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    // textAlign: "center",
   },
   block: {
-    paddingTop: "5%",
-    paddingLeft: 10,
-    maxWidth: 1200,
+    [theme.breakpoints.up("sm")]: {
+      width: "150%",
+      paddingTop: "5%",
+      paddingLeft: "15.4%",
+      paddingRight: "20%",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "5%",
+      paddingLeft: "14%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      paddingTop: "5%",
+      paddingLeft: "9.7%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      paddingTop: "5%",
+      paddingLeft: "15.4%",
+    },
   },
   title: {
     color: "#fff",
@@ -119,7 +130,7 @@ const useStyles = makeStyles({
     paddingTop: 146,
   },
   card: {
-    width: "48%",
+    width: "19%",
     position: "relative",
     height: 374,
     backgroundColor: "#000",
@@ -129,7 +140,7 @@ const useStyles = makeStyles({
   card1: {
     height: 374,
     position: "relative",
-    width: "24%",
+    width: "9%",
     backgroundColor: "#000",
     flexShrink: 0,
   },
@@ -192,9 +203,8 @@ const useStyles = makeStyles({
     flexFlow: "row nowrap",
     justifyContent: "flex-start",
     alignItems: "center",
-    // paddingRight:"300px"
   },
-});
+}));
 
 const Section6 = () => {
   const classes = useStyles();

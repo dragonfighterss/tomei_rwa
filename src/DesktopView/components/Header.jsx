@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       right: 0,
       marginTop: 37,
-      marginRight: "18.5%",
+      marginRight: "23.15%",
     },
   },
   LogoSymbol: {

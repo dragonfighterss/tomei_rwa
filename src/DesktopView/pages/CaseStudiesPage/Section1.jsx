@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { Container } from "@mui/material";
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles({
     letterSpacing: -1.6,
     textTransform: "capitalize",
     width: 230,
-    paddingLeft: 160,
     paddingTop: 160,
   },
 });
@@ -28,7 +28,9 @@ const Section1 = () => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.title}>Case Studies</div>
+      <Container maxWidth="lg">
+        <div className={classes.title}>Case Studies</div>
+      </Container>
     </div>
   );
 };
