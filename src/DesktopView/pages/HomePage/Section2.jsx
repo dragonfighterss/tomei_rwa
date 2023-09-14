@@ -5,7 +5,7 @@ import { ReactComponent as Icon2 } from "../../../assets/images/Group_11085.svg"
 import { ReactComponent as Icon3 } from "../../../assets/images/Group _11086.svg";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: 900,
@@ -34,9 +34,26 @@ const useStyles = makeStyles({
     letterSpacing: 0.35,
   },
   bottom: {
-    height: 760,
-    width: 1000,
-    paddingTop: 132,
+    [theme.breakpoints.up("sm")]: {
+      height: 760,
+      width: 842,
+      paddingTop: 132,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 760,
+      width: 1000,
+      paddingTop: 132,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 760,
+      width: 1000,
+      paddingTop: 132,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 760,
+      width: 1000,
+      paddingTop: 132,
+    },
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -72,7 +89,7 @@ const useStyles = makeStyles({
     height: 279,
     marginRight: 115,
   },
-});
+}));
 const Section2 = () => {
   const classes = useStyles();
 

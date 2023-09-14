@@ -4,7 +4,7 @@ import { ReactComponent as Icon2 } from "../../../assets/images/Group_11042.svg"
 import { Divider, Typography, Container } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: 480,
@@ -47,13 +47,27 @@ const useStyles = makeStyles({
     paddingRight: 50,
   },
   block: {
-    width: 566,
-    height: 80,
+    [theme.breakpoints.up("sm")]: {
+      width: "24%",
+      height: 80,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "40%",
+      height: 80,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "47%",
+      height: 80,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "46%",
+      height: 80,
+    },
     display: "inline-flex",
     alignItems: "flex-start",
     paddingRight: 80.59,
   },
-});
+}));
 const Section5 = () => {
   const classes = useStyles();
 

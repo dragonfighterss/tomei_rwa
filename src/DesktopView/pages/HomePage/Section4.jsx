@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     [theme.breakpoints.up("sm")]: {
-      width: "100%",
+      width: "95%",
       height: 500,
       flexShrink: 0,
       borderRadius: 30,
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       alignItems: "flex-start",
     },
     [theme.breakpoints.up("md")]: {
-      width: "100%",
+      width: "95%",
       height: 500,
       flexShrink: 0,
       borderRadius: 30,

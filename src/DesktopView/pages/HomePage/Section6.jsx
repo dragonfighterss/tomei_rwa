@@ -67,20 +67,23 @@ const useStyles = makeStyles((theme) => ({
   },
   block: {
     [theme.breakpoints.up("sm")]: {
-      width: "150%",
+      width: 1000,
       paddingTop: "5%",
       paddingLeft: "15.4%",
       paddingRight: "20%",
     },
     [theme.breakpoints.up("md")]: {
+      width: 1500,
       paddingTop: "5%",
       paddingLeft: "14%",
     },
     [theme.breakpoints.up("lg")]: {
+      width: 2000,
       paddingTop: "5%",
       paddingLeft: "9.7%",
     },
     [theme.breakpoints.up("xl")]: {
+      width: 3000,
       paddingTop: "5%",
       paddingLeft: "15.4%",
     },
@@ -130,17 +133,45 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 146,
   },
   card: {
-    width: "19%",
+    [theme.breakpoints.up("sm")]: {
+      marginRight: 30,
+      width: "33%",
+    },
+    [theme.breakpoints.up("md")]: {
+      marginRight: 30,
+      width: "33%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginRight: 30,
+      width: "32%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      marginRight: 30,
+      width: "25.5%",
+    },
     position: "relative",
     height: 374,
     backgroundColor: "#000",
-    marginRight: 30,
     flexShrink: 0,
   },
   card1: {
-    height: 374,
+    [theme.breakpoints.up("sm")]: {
+      width: "15%",
+      height: 374,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "13%",
+      height: 374,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "17%",
+      height: 374,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "16%",
+      height: 374,
+    },
     position: "relative",
-    width: "9%",
     backgroundColor: "#000",
     flexShrink: 0,
   },

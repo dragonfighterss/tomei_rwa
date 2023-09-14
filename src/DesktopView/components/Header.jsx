@@ -46,14 +46,14 @@ const useStyles = makeStyles((theme) => ({
       position: "absolute",
       right: 0,
       marginTop: 37,
-      marginRight: "11.5%",
+      marginRight: "13.7%",
     },
     [theme.breakpoints.up("xl")]: {
       display: "flex",
       position: "absolute",
       right: 0,
       marginTop: 37,
-      marginRight: "23.15%",
+      marginRight: "19.05%",
     },
   },
   LogoSymbol: {
