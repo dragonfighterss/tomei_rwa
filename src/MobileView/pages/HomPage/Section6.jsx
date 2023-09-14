@@ -1,14 +1,74 @@
-import React from "react";
-import { Divider } from "@mui/material";
+import React, { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@mui/styles";
+import { Divider } from "@mui/material";
+import { ReactComponent as FirstNumIcon } from "../../../assets/images/Group_11053.svg";
+import { ReactComponent as SecondNumIcon } from "../../../assets/images/Group_11054.svg";
+import { ReactComponent as ThirdNumIcon } from "../../../assets/images/Group_11055.svg";
+import { ReactComponent as FourthNumIcon } from "../../../assets/images/Group_11056.svg";
+import { ReactComponent as RightArrowIcon } from "../../../assets/images/Group_11075.svg";
+import { ReactComponent as LeftArrowIcon } from "../../../assets/images/Group_11076.svg";
+import styled from "styled-components";
 
-const useStyles = makeStyles({
+const TallOuterContainer = styled.div.attrs(({ dynamicHeight }) => ({
+  style: { height: `${dynamicHeight}px` },
+}))`
+  position: relative;
+  width: 100%;
+`;
+
+const StickyInnerContainer = styled.div`
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+`;
+
+const HorizontalTranslateContainer = styled.div.attrs(({ translateX }) => ({
+  style: { transform: `translateX(${translateX}px)` },
+}))`
+  position: relative;
+  height: 100%;
+  will-change: transform;
+  padding-bottom: 130px;
+`;
+
+const calcDynamicHeight = (objectWidth) => {
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  return objectWidth - vw + vh + 150;
+};
+
+const handleDynamicHeight = (ref, setDynamicHeight) => {
+  try {
+    if (ref?.current) {
+      const objectWidth = ref.current.scrollWidth;
+      const dynamicHeight = calcDynamicHeight(objectWidth);
+      setDynamicHeight(dynamicHeight);
+    }
+  } catch (e) {}
+};
+
+const applyScrollListener = (ref, setTranslateX) => {
+  try {
+    window.addEventListener("scroll", () => {
+      if (ref?.current) {
+        const offsetTop = -ref.current.offsetTop;
+        console.log("------- applu scroll listener ---", offsetTop);
+        setTranslateX(offsetTop);
+      }
+    });
+  } catch (e) {}
+};
+
+const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: 1075,
     backgroundColor: "#000",
   },
   block: {
+    width: 1200,
     paddingTop: 80,
     paddingLeft: 37,
   },
@@ -32,6 +92,7 @@ const useStyles = makeStyles({
     letterSpacing: 0.38,
     width: 315,
     paddingTop: 49,
+    paddingBottom: 80,
   },
   subDescription: {
     color: "#FFF",
@@ -45,8 +106,8 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
   },
   line: {
+    width: "61.4%",
     background: "#FFF",
-    width: 1120,
     height: 1,
   },
   content: {
@@ -54,23 +115,262 @@ const useStyles = makeStyles({
     paddingBottom: 109,
     paddingTop: 146,
   },
-});
+  card: {
+    marginRight: 30,
+    width: "33%",
+    position: "relative",
+    height: 374,
+    backgroundColor: "#000",
+    flexShrink: 0,
+  },
+  card1: {
+    width: "15%",
+    height: 374,
+    position: "relative",
+    backgroundColor: "#000",
+    flexShrink: 0,
+  },
+  cardLine: {
+    background: "#FFF",
+    width: "100%",
+    height: 2,
+  },
+  cardLine1: {
+    background: "#FFF",
+    width: "100%",
+    height: 2,
+    opacity: "15%",
+  },
+  numberIcon: {
+    paddingBottom: 30,
+  },
+  numberIcon1: {
+    opacity: "15%",
+    paddingBottom: 30,
+  },
+  cardTitle: {
+    color: "#FFF",
+    fontFamily: "Rand",
+    fontSize: 38,
+    fontStyle: "normal",
+    fontWeight: 300,
+    lineHeight: "120%",
+    letterSpacing: 0.38,
+    paddingTop: 31,
+  },
+  cardTitleBg: {
+    paddingTop: 40,
+  },
+  cardDescription: {
+    color: "#FFF",
+    fontFamily: "Rand",
+    fontSize: 17.5,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "150%",
+    letterSpacing: 0.35,
+    paddingTop: 14,
+    width: 290,
+  },
+  rightArrowIcon: {
+    paddingLeft: 20,
+  },
+  leftArrowIcon: {
+    paddingTop: 8,
+    position: "absolute",
+    marginLeft: 30,
+  },
+  cardContainer: {
+    position: "relative",
+    height: "100%",
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+}));
+
 const Section6 = () => {
   const classes = useStyles();
+  const [dynamicHeight, setDynamicHeight] = useState(null);
+  const [translateX, setTranslateX] = useState(0);
+  const [currentCard, setCurrentCard] = useState(1);
 
+  const containerRef = useRef(null);
+  const objectRef = useRef(null);
+
+  const resizeHandler = () => {
+    handleDynamicHeight(objectRef, setDynamicHeight);
+  };
+
+  useEffect(() => {
+    handleDynamicHeight(objectRef, setDynamicHeight);
+    window.addEventListener("resize", resizeHandler);
+    applyScrollListener(containerRef, setTranslateX);
+  }, []);
+  useEffect(() => {
+    let cardWidth = window.innerWidth * 0.1;
+    if (0 < -translateX && -translateX < cardWidth) {
+      setCurrentCard(1);
+    } else if (cardWidth < -translateX && -translateX < cardWidth * 1.8) {
+      setCurrentCard(2);
+    } else if (cardWidth * 1.8 < -translateX && -translateX < cardWidth * 2.5) {
+      setCurrentCard(3);
+    } else if (cardWidth * 2.5 < -translateX && -translateX < cardWidth * 3) {
+      setCurrentCard(4);
+    }
+  }, [translateX]);
+  console.log("----- current card ---", currentCard);
   return (
     <div className={classes.root}>
-      <div className={classes.block}>
-        <div className={classes.title}>Technology</div>
-        <div className={classes.subTitle}>The Power of Programmable ZK</div>
-        <div classes={classes.content}></div>
-        <Divider className={classes.line} />
-        <div className={classes.subDescription}>
-          POWERED BY JIRITSU ZK Nodes
-        </div>
-      </div>
+      <TallOuterContainer dynamicHeight={dynamicHeight}>
+        <StickyInnerContainer ref={containerRef}>
+          <div className={classes.block}>
+            <div className={classes.title}>Technology</div>
+            <div className={classes.subTitle}>The Power of Programmable ZK</div>
+            <div classes={classes.content}>
+              <HorizontalTranslateContainer
+                translateX={translateX}
+                ref={objectRef}
+              >
+                <div className={classes.cardContainer}>
+                  <div
+                    className={currentCard === 1 ? classes.card : classes.card1}
+                  >
+                    <FirstNumIcon
+                      className={
+                        currentCard === 1
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 1 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 1 && (
+                      <div className={classes.cardTitleBg}>
+                        <div>
+                          <LeftArrowIcon style={{ opacity: "0.2" }} />
+                          <RightArrowIcon className={classes.rightArrowIcon} />
+                        </div>
+                        <div className={classes.cardTitle}>
+                          Asset On Boarding
+                        </div>
+                      </div>
+                    )}
+                    {currentCard === 1 && (
+                      <div className={classes.cardDescription}>
+                        Asset Onboarding (ZK DOCS): Import ownership and
+                        policies securely.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 2 ? classes.card : classes.card1}
+                  >
+                    <SecondNumIcon
+                      className={
+                        currentCard === 2
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 2 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 2 && (
+                      <div className={classes.cardTitleBg}>
+                        <div>
+                          <LeftArrowIcon />
+                          <RightArrowIcon className={classes.rightArrowIcon} />
+                        </div>
+                        <div className={classes.cardTitle}>Automation</div>
+                      </div>
+                    )}
+                    {currentCard === 2 && (
+                      <div className={classes.cardDescription}>
+                        Mint tokens in compliance with KYC requirements.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 3 ? classes.card : classes.card1}
+                  >
+                    <ThirdNumIcon
+                      className={
+                        currentCard === 3
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 3 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 3 && (
+                      <div className={classes.cardTitleBg}>
+                        <div>
+                          <LeftArrowIcon />
+                          <RightArrowIcon className={classes.rightArrowIcon} />
+                        </div>
+                        <div className={classes.cardTitle}>Valuation</div>
+                      </div>
+                    )}
+                    {currentCard === 3 && (
+                      <div className={classes.cardDescription}>
+                        Verify asset valuations with best-in-class oracles.
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className={currentCard === 4 ? classes.card : classes.card1}
+                  >
+                    <FourthNumIcon
+                      className={
+                        currentCard === 4
+                          ? classes.numberIcon
+                          : classes.numberIcon1
+                      }
+                    />
+                    <Divider
+                      className={
+                        currentCard === 4 ? classes.cardLine : classes.cardLine1
+                      }
+                    />
+                    {currentCard === 4 && (
+                      <div className={classes.cardTitleBg}>
+                        <div>
+                          <LeftArrowIcon />
+                          <RightArrowIcon
+                            className={classes.rightArrowIcon}
+                            style={{ opacity: "0.2" }}
+                          />
+                        </div>
+                        <div className={classes.cardTitle}>Markets</div>
+                      </div>
+                    )}
+                    {currentCard === 4 && (
+                      <div className={classes.cardDescription}>
+                        Support for initial and secondary offerings.
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </HorizontalTranslateContainer>
+            </div>
+            {/* <Divider className={classes.line} /> */}
+            <div className={classes.subDescription}>
+              POWERED BY JIRITSU ZK Nodes
+            </div>
+          </div>
+        </StickyInnerContainer>
+      </TallOuterContainer>
     </div>
   );
 };
-
 export default Section6;

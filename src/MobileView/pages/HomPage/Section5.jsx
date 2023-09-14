@@ -6,7 +6,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   root: {
-    width: 375,
+    width: "100%",
     height: 740,
     backgroundColor: "#141414",
   },
@@ -55,11 +55,6 @@ const Section5 = () => {
   return (
     <div className={classes.root}>
       <div>
-        {/* <div>
-          <div style={{ width: "585px" }}>
-            <span className={classes.title}>Strategic investors</span>
-          </div>
-        </div> */}
         <Container>
           <div className={classes.bottom}>
             <div className={classes.block}>

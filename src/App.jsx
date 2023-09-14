@@ -11,6 +11,7 @@ function App() {
   const [page, setPage] = useState("homepage");
   const [open, setOpen] = React.useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [investerType, setInvesterType] = useState("individual");
 
   const handleOpenModal = () => {
     setOpen(true);
@@ -27,6 +28,11 @@ function App() {
     setMenuOpen(false);
     setPage(nextPage);
   };
+
+  const handleChangeInvesterType = (type) => {
+    setInvesterType(type);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       {isMobile ? (
@@ -35,6 +41,8 @@ function App() {
           handleClose={handleClose}
           handleOpenModal={handleOpenModal}
           handleOpenMemu={handleOpenMemu}
+          handleChangeInvesterType={handleChangeInvesterType}
+          investerType={investerType}
           menuOpen={menuOpen}
           page={page}
           open={open}
@@ -44,6 +52,8 @@ function App() {
           handleChangePage={handleChangePage}
           handleClose={handleClose}
           handleOpenModal={handleOpenModal}
+          handleChangeInvesterType={handleChangeInvesterType}
+          investerType={investerType}
           page={page}
           open={open}
         />

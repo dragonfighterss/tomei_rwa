@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     height: 1120,
-    marginTop: -60
+    marginTop: -60,
   },
   slogon: {
     color: "#fff",
@@ -68,7 +68,7 @@ const useStyles = makeStyles({
     mixBlendMode: "exclusion",
   },
 });
-const Section1 = () => {
+const Section1 = (props) => {
   const classes = useStyles();
 
   return (
@@ -124,6 +124,7 @@ const Section1 = () => {
                   color: "white",
                 },
               }}
+              onClick={() => props.handleOpenModal(true)}
             >
               Banks and INSURANCE
             </Button>
@@ -150,6 +151,7 @@ const Section1 = () => {
                   color: "white",
                 },
               }}
+              onClick={() => props.handleOpenModal(true)}
             >
               PRIVATE EQUITY
             </Button>
@@ -176,6 +178,7 @@ const Section1 = () => {
                   color: "white",
                 },
               }}
+              onClick={() => props.handleOpenModal(true)}
             >
               ASSET MANAGERS
             </Button>
@@ -201,6 +204,7 @@ const Section1 = () => {
                   color: "white",
                 },
               }}
+              onClick={() => props.handleOpenModal(true)}
             >
               FAMILY OFFICE
             </Button>

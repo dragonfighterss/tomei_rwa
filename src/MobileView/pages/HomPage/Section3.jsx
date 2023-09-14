@@ -43,6 +43,8 @@ const useStyles = makeStyles({
     lineHeight: "120%",
     letterSpacing: 0.38,
     opacity: 0.3,
+    paddingTop: "30px",
+    cursor: "pointer",
   },
   content2: {
     color: "#fff",
@@ -52,6 +54,7 @@ const useStyles = makeStyles({
     fontWeight: 300,
     lineHeight: "120%",
     letterSpacing: 0.38,
+    cursor: "pointer",
   },
   content1_bg: {
     width: 270,
@@ -88,20 +91,22 @@ const useStyles = makeStyles({
     background: "#FFF",
     width: 292,
     height: 1,
-    marginBottom: 30,
+    marginBottom: "30px !important",
   },
   plusIcon: {
     right: 30,
     position: "absolute",
     marginTop: -48,
+    cursor: "pointer",
   },
   crossIcon: {
     right: 20,
     position: "absolute",
     marginTop: -48,
+    cursor: "pointer",
   },
 });
-const Section3 = () => {
+const Section3 = (props) => {
   const classes = useStyles();
 
   return (
@@ -111,16 +116,53 @@ const Section3 = () => {
           <span className={classes.title}>Tomei creates liquidity</span>
           <div className={classes.content1_bg}>
             <Divider className={classes.line} />
-            <span className={classes.content1}>Institutional Investors</span>
-            <PlusIcon className={classes.plusIcon} />
+            <span
+              className={
+                props.investerType === "institution"
+                  ? classes.content2
+                  : classes.content1
+              }
+              onClick={() => props.handleChangeInvesterType("institution")}
+            >
+              Institutional Investors
+            </span>
+            {props.investerType === "individual" ? (
+              <PlusIcon
+                className={classes.plusIcon}
+                onClick={() => props.handleChangeInvesterType("institution")}
+              />
+            ) : (
+              <CrossIcon
+                className={classes.crossIcon}
+                onClick={() => props.handleChangeInvesterType("individual")}
+              />
+            )}{" "}
           </div>
           <div>
             <Divider className={classes.line} />
-            <span className={classes.content2}>Individual Investors</span>
-            <CrossIcon className={classes.crossIcon} />
+            <span
+              className={
+                props.investerType === "individual"
+                  ? classes.content2
+                  : classes.content1
+              }
+              onClick={() => props.handleChangeInvesterType("individual")}
+            >
+              Individual Investors
+            </span>
+            {props.investerType === "institution" ? (
+              <PlusIcon
+                className={classes.plusIcon}
+                onClick={() => props.handleChangeInvesterType("individual")}
+              />
+            ) : (
+              <CrossIcon
+                className={classes.crossIcon}
+                onClick={() => props.handleChangeInvesterType("institution")}
+              />
+            )}
           </div>
         </div>
-        {/* */}
         <div className={classes.right}>
           <Container maxWidth="lg">
             <div className={classes.description}>
@@ -157,6 +199,7 @@ const Section3 = () => {
                 marginLeft: "5px",
                 border: "0.75px solid #FFF",
               }}
+              onClick={() => props.handleOpenModal(true)}
             >
               Request A Consultation
             </Button>

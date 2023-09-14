@@ -67,29 +67,36 @@ const ConsultationModal = (props) => {
           className={classes.btnGroup}
           textAlign="center"
         >
-          <Button
-            className={classes.modalBtn}
-            sx={{
-              display: "block",
-              color: "white",
-              textAlign: "center",
-              fontFamily: "Rand",
-              fontSize: 22,
-              fontStyle: "normal",
-              fontWeight: 300,
-              lineHeight: "150%",
-              letterSpacing: 0.44,
-              borderRadius: 5,
-              paddingLeft: "50px",
-              paddingRight: "50px",
-              paddingTop: "20px",
-              paddingBottom: "20px",
-              border: "1px solid #D9D9D9",
-              width: "400px",
-            }}
+          <a
+            target="_blank"
+            href="https://www.react.com"
+            style={{ textDecoration: "none" }}
+            rel="noreferrer"
           >
-            Calend.ly
-          </Button>
+            <Button
+              className={classes.modalBtn}
+              sx={{
+                display: "block",
+                color: "white",
+                textAlign: "center",
+                fontFamily: "Rand",
+                fontSize: 22,
+                fontStyle: "normal",
+                fontWeight: 300,
+                lineHeight: "150%",
+                letterSpacing: 0.44,
+                borderRadius: 5,
+                paddingLeft: "50px",
+                paddingRight: "50px",
+                paddingTop: "20px",
+                paddingBottom: "20px",
+                border: "1px solid #D9D9D9",
+                width: "400px",
+              }}
+            >
+              Calend.ly
+            </Button>
+          </a>
           <Button
             sx={{
               display: "block",
@@ -110,6 +117,7 @@ const ConsultationModal = (props) => {
               marginTop: "20px",
               width: "400px",
             }}
+            onClick={() => (window.location = "mailto:info@tomei.network")}
           >
             info@tomei.network
           </Button>

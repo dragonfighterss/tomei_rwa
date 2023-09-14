@@ -77,7 +77,7 @@ const useStyles = makeStyles({
     color: "#FFF",
     position: "absolute",
     marginTop: -251,
-    marginLeft:  23,
+    marginLeft: 23,
     display: "inline-flex",
     alignItems: "flex-start",
   },
@@ -129,6 +129,8 @@ const useStyles = makeStyles({
     position: "absolute",
     display: "inline-flex",
     alignItems: "flex-start",
+    paddingLeft: 33,
+    paddingTop: 30,
   },
   right_middle_icon: {
     paddingRight: 14,

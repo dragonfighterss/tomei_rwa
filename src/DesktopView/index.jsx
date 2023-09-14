@@ -12,7 +12,15 @@ const DesktopView = (props) => {
         handleChangePage={props.handleChangePage}
         handleOpenModal={props.handleOpenModal}
       />
-      {props.page === "homepage" ? <Homepage /> : <CaseStudiesPage />}
+      {props.page === "homepage" ? (
+        <Homepage
+          handleOpenModal={props.handleOpenModal}
+          handleChangeInvesterType={props.handleChangeInvesterType}
+          investerType = {props.investerType}
+        />
+      ) : (
+        <CaseStudiesPage />
+      )}
       <ConsultationModal open={props.open} handleClose={props.handleClose} />
       <Footer />
     </div>

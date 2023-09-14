@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   titleBg: {
     width: "100%",
     paddingTop: 140,
-    float: "right", 
+    float: "right",
   },
   content1: {
     color: "#fff",
@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "120%",
     letterSpacing: 0.38,
     opacity: 0.3,
+    cursor: "pointer",
   },
   content2: {
     color: "#fff",
@@ -56,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "120%",
     letterSpacing: 0.38,
     paddingLeft: 19,
+    cursor: "pointer",
   },
   content1_bg: {
     paddingTop: 175,
@@ -147,24 +149,41 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const Section3 = () => {
+const Section3 = (props) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <div className={classes.left}>
-        <div
-          className={classes.titleBg}
-          style={{ maxWidth: "600px"}}
-        >
+        <div className={classes.titleBg} style={{ maxWidth: "600px" }}>
           <Container maxWidth="lg">
             <span className={classes.title}>Tomei creates liquidity</span>
-            <div className={classes.content1_bg}>
-              <span className={classes.content1}>Institutional Investors</span>
+            <div
+              className={classes.content1_bg}
+              onClick={() => props.handleChangeInvesterType("institution")}
+            >
+              {props.investerType === "institution" && <Icon />}
+              <span
+                className={
+                  props.investerType === "institution"
+                    ? classes.content2
+                    : classes.content1
+                }
+              >
+                Institutional Investors
+              </span>
             </div>
-            <div>
-              <Icon />
-              <span className={classes.content2}>Individual Investors</span>
+            <div onClick={() => props.handleChangeInvesterType("individual")}>
+              {props.investerType === "individual" && <Icon />}
+              <span
+                className={
+                  props.investerType === "individual"
+                    ? classes.content2
+                    : classes.content1
+                }
+              >
+                Individual Investors
+              </span>
             </div>
           </Container>
         </div>
@@ -204,6 +223,7 @@ const Section3 = () => {
               marginLeft: "60px",
               border: "0.75px solid #FFF",
             }}
+            onClick={() => props.handleOpenModal(true)}
           >
             Request A Consultation
           </Button>

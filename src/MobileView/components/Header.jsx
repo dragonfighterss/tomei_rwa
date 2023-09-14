@@ -6,10 +6,11 @@ import { ReactComponent as MenuIcon } from "../../assets/images/Group_11098.svg"
 
 const useStyles = makeStyles({
   header: {
-    width:"100%",
+    width: "100%",
     background: "#000000",
     color: "#FFF",
     height: 60,
+    zIndex: 9999,
   },
   logo: {
     width: 156.563,

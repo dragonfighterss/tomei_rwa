@@ -123,8 +123,19 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 160,
   },
   line: {
+    [theme.breakpoints.up("sm")]: {
+      width: "61.4%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "54.4%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "51.8%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "37.8%",
+    },
     background: "#FFF",
-    width: "37.8%",
     height: 1,
   },
   content: {
@@ -147,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.up("xl")]: {
       marginRight: 30,
-      width: "25.5%",
+      width: "22.5%",
     },
     position: "relative",
     height: 374,
@@ -168,7 +179,7 @@ const useStyles = makeStyles((theme) => ({
       height: 374,
     },
     [theme.breakpoints.up("xl")]: {
-      width: "16%",
+      width: "11%",
       height: 374,
     },
     position: "relative",

@@ -16,9 +16,15 @@ const MobileView = (props) => {
           handleOpenModal={props.handleOpenModal}
         />
       )}
-      {!props.open && props.page === "homepage" && <Homepage />}
+      {!props.open && props.page === "homepage" && (
+        <Homepage
+          handleOpenModal={props.handleOpenModal}
+          handleChangeInvesterType={props.handleChangeInvesterType}
+          investerType={props.investerType}
+        />
+      )}
       {!props.open && props.page === "caseStudiesPage" && <CaseStudiesPage />}
-      <ConsultationModal open={props.open} handleClose={props.handleClose} />
+      {props.open && <ConsultationModal handleClose={props.handleClose} />}
       {!props.menuOpen && <Footer />}
     </div>
   );

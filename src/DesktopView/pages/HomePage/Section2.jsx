@@ -70,15 +70,16 @@ const useStyles = makeStyles((theme) => ({
   },
   content1: {
     color: "#FAFAFA",
-    fontSize: 22,
+    fontSize: "22px !important",
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: "150%",
     letterSpacing: 0.44,
+    width: "234px",
   },
   content2: {
     color: "#FBA850",
-    fontSize: 22,
+    fontSize: "22px !important",
     fontStyle: "normal",
     fontWeight: 300,
     lineHeight: "150%",
