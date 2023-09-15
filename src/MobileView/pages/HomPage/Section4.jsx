@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     backgroundColor: "#000",
   },
   box: {
-    // height: 500,
     flexShrink: 0,
     backgroundColor: "#FFE1D7",
   },

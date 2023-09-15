@@ -67,7 +67,6 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     marginRight: 30,
-    width: "33%",
     position: "relative",
     height: 374,
     backgroundColor: "#000",
@@ -151,11 +150,11 @@ const Section6 = () => {
         <div className={classes.subTitle}>The Power of Programmable ZK</div>
         <div ref={elRef}>
           <div
-            style={{ whiteSpace: "nowrap", display: "flex", width: "3000px" }}
+            style={{ whiteSpace: "nowrap", display: "flex", width: "375px" }}
           >
             <div
               className={currentCard === 1 ? classes.card : classes.card1}
-              style={{ display: `${currentCard > 1 ? "none" : "block"}` }}
+              style={{ display: `${currentCard === 1 ? "block" : "none"}` }}
             >
               <FirstNumIcon
                 className={
@@ -185,7 +184,7 @@ const Section6 = () => {
             </div>
             <div
               className={currentCard === 2 ? classes.card : classes.card1}
-              style={{ display: `${currentCard > 2 ? "none" : "block"}` }}
+              style={{ display: `${currentCard === 2 ? "block" : "none"}` }}
             >
               <SecondNumIcon
                 className={
@@ -214,7 +213,7 @@ const Section6 = () => {
             </div>
             <div
               className={currentCard === 3 ? classes.card : classes.card1}
-              style={{ display: `${currentCard > 3 ? "none" : "block"}` }}
+              style={{ display: `${currentCard === 3 ? "block" : "none"}` }}
             >
               <ThirdNumIcon
                 className={
@@ -241,7 +240,10 @@ const Section6 = () => {
                 </div>
               )}
             </div>
-            <div className={currentCard === 4 ? classes.card : classes.card1}>
+            <div
+              className={currentCard === 4 ? classes.card : classes.card1}
+              style={{ display: `${currentCard === 4 ? "block" : "none"}` }}
+            >
               <FourthNumIcon
                 className={
                   currentCard === 4 ? classes.numberIcon : classes.numberIcon1

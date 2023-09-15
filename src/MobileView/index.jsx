@@ -5,7 +5,7 @@ import ConsultationModal from "./components/Consultation/ConsultationModal";
 import Homepage from "./pages/HomPage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import MenuPage from "./pages/MenuPage";
-// style={{ overflowX: "hidden" }}
+
 const MobileView = (props) => {
   return (
     <div className="MobileView" >

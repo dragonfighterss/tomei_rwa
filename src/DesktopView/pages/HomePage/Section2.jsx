@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contentGroup: {
     paddingTop: 50,
+    width: 300,
   },
   content1: {
     color: "#FAFAFA",

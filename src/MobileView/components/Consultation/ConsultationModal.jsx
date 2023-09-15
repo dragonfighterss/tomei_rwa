@@ -44,10 +44,6 @@ const ConsultationModal = (props) => {
   const classes = useStyles();
   return (
     <div
-      // open={props.open}
-      // onClose={props.handleClose}
-      // aria-labelledby="transition-modal-title"
-      // aria-describedby="transition-modal-description"
       sx={{ position: "absolute" }}
     >
       <Box className={classes.modal}>
