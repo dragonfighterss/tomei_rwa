@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { makeStyles } from "@mui/styles";
-import { Divider } from "@mui/material";
+import { Container, Divider } from "@mui/material";
 import { ReactComponent as FirstNumIcon } from "../../../assets/images/Group_11053.svg";
 import { ReactComponent as SecondNumIcon } from "../../../assets/images/Group_11054.svg";
 import { ReactComponent as ThirdNumIcon } from "../../../assets/images/Group_11055.svg";
@@ -123,17 +123,12 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 160,
   },
   line: {
-    [theme.breakpoints.up("sm")]: {
-      width: "61.4%",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "54.4%",
-    },
-    [theme.breakpoints.up("lg")]: {
-      width: "51.8%",
-    },
+    marginRight: "7px !important",
+    [theme.breakpoints.up("sm")]: { marginRight: 15 },
+    [theme.breakpoints.up("md")]: { marginRight: 15 },
+    [theme.breakpoints.up("lg")]: { marginRight: 15 },
     [theme.breakpoints.up("xl")]: {
-      width: "37.8%",
+      marginRight: 7,
     },
     background: "#FFF",
     height: 1,
@@ -409,11 +404,13 @@ const Section6 = () => {
                 </div>
               </HorizontalTranslateContainer>
             </div>
+          </div>
+          <Container>
             <Divider className={classes.line} />
             <div className={classes.subDescription}>
               POWERED BY JIRITSU ZK Nodes
             </div>
-          </div>
+          </Container>
         </StickyInnerContainer>
       </TallOuterContainer>
     </div>

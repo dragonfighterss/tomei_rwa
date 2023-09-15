@@ -36,22 +36,22 @@ const useStyles = makeStyles((theme) => ({
   bottom: {
     [theme.breakpoints.up("sm")]: {
       height: 760,
-      width: 842,
+      width: 872,
       paddingTop: 132,
     },
     [theme.breakpoints.up("md")]: {
       height: 760,
-      width: 1000,
+      width: "100%",
       paddingTop: 132,
     },
     [theme.breakpoints.up("lg")]: {
       height: 760,
-      width: 1000,
+      width: "100%",
       paddingTop: 132,
     },
     [theme.breakpoints.up("xl")]: {
       height: 760,
-      width: 1000,
+      width: "100%",
       paddingTop: 132,
     },
     display: "inline-flex",
@@ -86,9 +86,26 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 0.44,
   },
   block: {
-    width: 285,
-    height: 279,
-    marginRight: 115,
+    [theme.breakpoints.up("sm")]: {
+      width: 100,
+      height: 279,
+      marginRight: 115,
+    },
+    [theme.breakpoints.up("md")]: {
+      width: 181,
+      height: 279,
+      marginRight: 115,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 285,
+      height: 279,
+      marginRight: 115,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 285,
+      height: 279,
+      marginRight: 115,
+    },
   },
 }));
 const Section2 = () => {

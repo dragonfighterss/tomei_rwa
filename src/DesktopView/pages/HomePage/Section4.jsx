@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: -4
+    marginTop: -4,
   },
   box: {
     [theme.breakpoints.up("sm")]: {
@@ -31,26 +31,27 @@ const useStyles = makeStyles((theme) => ({
       display: "inline-flex",
       alignItems: "flex-start",
     },
-      [theme.breakpoints.up("lg")]: {
-        width: "90%",
-        height: 500,
-        flexShrink: 0,
-        borderRadius: 30,
-        backgroundColor: "#FFE1D7",
-        display: "inline-flex",
-        alignItems: "flex-start",
-      },
-        [theme.breakpoints.up("xl")]: {
-          width: "90%",
-          height: 500,
-          flexShrink: 0,
-          borderRadius: 30,
-          backgroundColor: "#FFE1D7",
-          display: "inline-flex",
-          alignItems: "flex-start",
-        },
-  
-   
+    [theme.breakpoints.up("lg")]: {
+      width: "90%",
+      height: 500,
+      flexShrink: 0,
+      borderRadius: 30,
+      backgroundColor: "#FFE1D7",
+      display: "inline-flex",
+      alignItems: "flex-start",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "90%",
+      height: 500,
+      flexShrink: 0,
+      borderRadius: 30,
+      backgroundColor: "#FFE1D7",
+      display: "inline-flex",
+      alignItems: "flex-start",
+    },
+
+    display: "inline-flex",
+    alignItems: "flex-start",
   },
   description: {
     [theme.breakpoints.up("sm")]: {
@@ -147,7 +148,7 @@ const Section4 = () => {
             <Box
               component="div"
               sx={{
-                width: { sm: "315px", md: "415px", lg: "665px" },
+                width: { sm: "315px", md: "415px", lg: "565px", xl: "665px" },
                 height: "500px",
                 backgroundImage: `url(${Img})`,
                 backgroundPosition: "center",

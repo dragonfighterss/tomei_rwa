@@ -27,34 +27,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
   },
   btnGroup: {
-    [theme.breakpoints.up("sm")]: {
-      display: "flex",
-      position: "absolute",
-      right: 0,
-      marginTop: 37,
-      marginRight: "7.5%",
-    },
-    [theme.breakpoints.up("md")]: {
-      display: "flex",
-      position: "absolute",
-      right: 0,
-      marginTop: 37,
-      marginRight: "7.5%",
-    },
-    [theme.breakpoints.up("lg")]: {
-      display: "flex",
-      position: "absolute",
-      right: 0,
-      marginTop: 37,
-      marginRight: "13.7%",
-    },
-    [theme.breakpoints.up("xl")]: {
-      display: "flex",
-      position: "absolute",
-      right: 0,
-      marginTop: 37,
-      marginRight: "19.05%",
-    },
+    display: "flex",
+    marginTop: 37,
+    float: "right",
+    right: 0,
   },
   LogoSymbol: {
     width: 42,
@@ -74,36 +50,36 @@ const Header = (props) => {
   return (
     <div className={classes.header}>
       <Container maxWidth="lg">
-        <div className={classes.logo}>
-          <LogoSymbol className={classes.LogoSymbol} />
-          <LogoName className={classes.LogoName} />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className={classes.logo}>
+            <LogoSymbol className={classes.LogoSymbol} />
+            <LogoName className={classes.LogoName} />
+          </div>
+          <div className={classes.btnGroup}>
+            <Button
+              className={classes.button}
+              onClick={() => props.handleChangePage("homepage")}
+              sx={{ color: "white", paddingRight: "30px" }}
+            >
+              Technology
+            </Button>
+            <Button
+              className={classes.button}
+              onClick={() => props.handleChangePage("caseStudiesPage")}
+              sx={{ color: "white", paddingRight: "30px" }}
+            >
+              Case Studies
+            </Button>
+            <Button
+              className={classes.button}
+              onClick={props.handleOpenModal}
+              sx={{ color: "white" }}
+            >
+              Consultation
+            </Button>
+          </div>
         </div>
       </Container>
-      <div className={classes.btnGroup}>
-        <Container maxWidth="lg">
-          <Button
-            className={classes.button}
-            onClick={() => props.handleChangePage("homepage")}
-            sx={{ color: "white", paddingRight: "30px" }}
-          >
-            Technology
-          </Button>
-          <Button
-            className={classes.button}
-            onClick={() => props.handleChangePage("caseStudiesPage")}
-            sx={{ color: "white", paddingRight: "30px" }}
-          >
-            Case Studies
-          </Button>
-          <Button
-            className={classes.button}
-            onClick={props.handleOpenModal}
-            sx={{ color: "white" }}
-          >
-            Consultation
-          </Button>
-        </Container>
-      </div>
     </div>
   );
 };
