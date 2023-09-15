@@ -76,7 +76,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 300,
     lineHeight: "150%",
     letterSpacing: 0.44,
-    width: "234px",
   },
   content2: {
     color: "#FBA850",
